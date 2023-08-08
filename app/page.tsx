@@ -1,9 +1,11 @@
 "use client";
-import new_post from "../public/blog.jpg";
 import quiz from "../public/04.png";
 import style from "../public/06.png";
 import blog from "../public/02.png";
 import us from "../public/us.jpg";
+import tennis from "../public/tennis.jpg";
+import dress from "../public/dress.jpg";
+import colorful from "../public/colorful.jpg";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -67,8 +69,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-6 ml-28">
-        <div className="bg-pink rounded-full h-[32rem] w-[32rem]  grid content-center mx-40 my-32 z-1 col-start-1 col-end-3">
+      <div className="grid grid-cols-10">
+        <div className="bg-pink rounded-full h-[32rem] w-[32rem]  grid content-center  my-32 z-1 col-start-2 ">
           <div className="absolute mt-32">
             <h1 className="bg-hotpink text-center text-2xl py-1 w-[36rem]">
               About us
@@ -82,19 +84,37 @@ export default function Home() {
             her body type the best.
           </p>
         </div>
-        <div className="col-start-3 col-end-6 ml-40">
+        <div className="col-start-5 col-end-10">
           <Image src={us} alt="us" className="h-96 w-auto my-52" />
         </div>
       </div>
-      <div className="flex justify-center">
-        <h1 className="bg-hotpink text-center">New blog posts</h1>
-        <article className="h-full relative overflow-hidden">
-          <Image src={new_post} alt="blog" className="object-cover w-36 h-36" />
-          <h1 className="text-[20px] text-white bottom-0 right-0 left-0 top-0 min-h-fit m-auto">
-            New fashion trend
-          </h1>
-        </article>
+      <div className="grid grid-cols-10">
+        <h1 className="bg-hotpink text-center text-2xl py-1 w-[36rem] col-start-2">
+          New blog posts
+        </h1>
       </div>
+      <div className="grid grid-cols-10 p-8 mb-48">
+        <div className="col-start-2 col-end-4 relative">
+          <a href="/" className="block w-full h-60">
+            <Image src={tennis} alt="tennis" className="h-60 object-cover" />
+            <div
+              className="absolute inset-0 flex items-center justify-center text-white text-2xl bg-black bg-opacity-50 hover:bg-opacity-70 transition ease-in-out duration-700 hover:text-3xl "
+              style={{ transition: "font-size 0.2s ease-in-out" }}
+            >
+              Tenniscore trend
+            </div>
+          </a>
+        </div>
+
+        <div className="col-start-5 col-end-7">
+          <Image src={colorful} alt="colorful" className="h-60 object-cover" />
+        </div>
+
+        <div className=" col-start-8 col-end-10">
+          <Image src={dress} alt="dress" className=" h-60  object-cover" />
+        </div>
+      </div>
+
       <Footer></Footer>
     </div>
   );
