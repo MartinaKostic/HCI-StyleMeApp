@@ -4,14 +4,15 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
+  //napravit da je follow us u centru, styleme and contact us na krajevima
   return (
     <>
-      <footer className="bg-pink p-7 text-center">
-        <div className="flex justify-between  h-full text-2xl">
-          styleme
-          <div>
+      <footer className="bg-pink p-7 text-center bottom-0 w-full">
+        <div className="flex justify-between h-full text-2xl">
+          <div className=""> styleme</div>
+          <div className="">
             Follow us:
-            <div className="flex mt-3">
+            <div className="flex flex-row mt-3">
               <div className="p-2">
                 <FaFacebookSquare />
               </div>

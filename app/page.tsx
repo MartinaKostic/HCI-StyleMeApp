@@ -11,29 +11,68 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Home() {
+  //dodaj krugove, linkove na botune glavne, namistit discover mroe botun, uskladit margine
   return (
     <div>
       <Header></Header>
       <div className="grid grid-cols-3 h-128 text-center">
-        <div className=" grid grid-row content-center bg-green bg-opacity-30">
+        <div className=" grid grid-row content-center bg-green bg-opacity-30 z-10">
           <div className="flex justify-center">
             <Image src={quiz} alt="quiz" className="h-52 w-auto " />
           </div>
           <h1 className="text-3xl ">Take a quiz</h1>
           <div className="flex justify-center">
-            <button className="border border-text_color m-10 h-10 w-[250px]">
-              Go to the section
+            <button className="border border-text_color m-10 h-10 w-[250px] relative hover-button">
+              <span>Go to the section</span>
+              <style jsx>{`
+                .hover-button::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background-color: transparent;
+                  transform: translate(0, 0);
+                  transition: transform 0.4s ease;
+                  z-index: 1;
+                }
+                .hover-button:hover::before {
+                  transform: translate(-20px, +10px);
+                  background-color: #fffa77;
+                  z-index: -1;
+                }
+              `}</style>
             </button>
           </div>
         </div>
-        <div className="grid gird-row content-center  bg-orange bg-opacity-30">
+        <div className="grid gird-row content-center  bg-orange bg-opacity-30 z-10">
           <div className="flex justify-center">
             <Image src={style} alt="quiz" className="h-52 w-auto" />
           </div>
           <h1 className="text-3xl ">Style Inspo</h1>
           <div className="flex justify-center">
-            <button className="border border-text_color m-10 h-10 w-[250px]">
-              Go to the section
+            <button className="border border-text_color m-10 h-10 w-[250px] relative hover-button">
+              <span>Go to the section</span>
+              <style jsx>{`
+                .hover-button::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background-color: transparent;
+                  transform: translate(0, 0);
+                  transition: transform 0.4s ease;
+                  z-index: 1;
+                }
+                .hover-button:hover::before {
+                  transform: translate(-20px, +10px);
+                  background-color: #fffa77;
+                  z-index: -1;
+                }
+              `}</style>
             </button>
           </div>
         </div>
@@ -44,7 +83,7 @@ export default function Home() {
           <h1 className="text-3xl ">Blog</h1>
           <div className="flex justify-center">
             <button className="border border-text_color m-10 h-10 w-[250px] relative hover-button">
-              <span className="z-10">Go to the section</span>
+              <span>Go to the section</span>
               {/* radi ovoga ispod je useclient */}
               <style jsx>{`
                 .hover-button::before {
@@ -93,12 +132,12 @@ export default function Home() {
           New blog posts
         </h1>
       </div>
-      <div className="grid grid-cols-10 p-8 mb-48">
+      <div className="grid grid-cols-10 p-8 mb-20">
         <div className="col-start-2 col-end-4 relative">
-          <a href="/" className="block w-full h-60">
+          <a href="/" className="w-full h-60">
             <Image src={tennis} alt="tennis" className="h-60 object-cover" />
             <div
-              className="absolute inset-0 flex items-center justify-center text-white text-2xl bg-black bg-opacity-50 hover:bg-opacity-70 transition ease-in-out duration-700 hover:text-3xl "
+              className="absolute inset-0 flex items-center justify-center text-white text-2xl bg-black bg-opacity-40 hover:bg-opacity-70 transition ease-in-out duration-700 hover:text-3xl "
               style={{ transition: "font-size 0.2s ease-in-out" }}
             >
               Tenniscore trend
@@ -106,12 +145,56 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="col-start-5 col-end-7">
-          <Image src={colorful} alt="colorful" className="h-60 object-cover" />
+        <div className="col-start-5 col-end-7 relative">
+          <a href="/" className="w-full h-60">
+            <Image
+              src={colorful}
+              alt="colorful"
+              className="h-60 object-cover"
+            />
+            <div
+              className="absolute inset-0 flex items-center justify-center text-white text-2xl bg-black bg-opacity-40 hover:bg-opacity-70 transition ease-in-out duration-700 hover:text-3xl "
+              style={{ transition: "font-size 0.2s ease-in-out" }}
+            >
+              Colorful closet guide
+            </div>
+          </a>
         </div>
 
-        <div className=" col-start-8 col-end-10">
-          <Image src={dress} alt="dress" className=" h-60  object-cover" />
+        <div className="col-start-8 col-end-10 relative">
+          <a href="/" className="w-full h-60">
+            <Image src={dress} alt="dress" className=" h-60  object-cover" />
+            <div
+              className="absolute inset-0 flex items-center justify-center text-white text-2xl bg-black bg-opacity-40 hover:bg-opacity-70 transition ease-in-out duration-700 hover:text-3xl "
+              style={{ transition: "font-size 0.2s ease-in-out" }}
+            >
+              Find a perfect dress
+            </div>
+          </a>
+          <a href="/blog" className="absolute my-10 right-0">
+            <button className="border border-text_color h-10 w-[250px] relative hover-button text-lg">
+              <span>Discover more</span>
+              <style jsx>{`
+                .hover-button::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background-color: transparent;
+                  transform: translate(0, 0);
+                  transition: transform 0.4s ease;
+                  z-index: 1;
+                }
+                .hover-button:hover::before {
+                  transform: translate(-20px, +10px);
+                  background-color: #fffa77;
+                  z-index: -1;
+                }
+              `}</style>
+            </button>
+          </a>
         </div>
       </div>
 
