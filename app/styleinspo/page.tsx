@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import style from "../../public/06.png";
 import dramatic from "../../public/dramatic.jpg";
@@ -45,45 +46,47 @@ export default function StyleInspo() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-6">
-        <div className="mx-28 col-start-1 col-end-4">
-          <h1 className="bg-hotpink text-center text-2xl py-1 m-5 w-[36rem] ">
+      <div className="grid grid-cols-10">
+        <div className="col-start-2 col-span-5">
+          <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
             Dramatic type
           </h1>
-
-          <p className="m-5">
+        </div>
+        <div className="col-start-2 col-span-4 m-5 mx-16">
+          <p>
             The Dramatic ID needs to embrace their sharpness and therefore their
             clothing should also have a sharp and geometric feel to it. The
             Dramatics, in my opinion, are really able to lean into a lot of
             high-fashion trends...
           </p>
-
-          <a href="/blog" className="absolute my-10">
-            <button className="border border-text_color h-10 w-[250px] relative hover-button text-lg">
-              <span>More...</span>
-              {/* <style jsx>{`
-                .hover-button::before {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background-color: transparent;
-                  transform: translate(0, 0);
-                  transition: transform 0.4s ease;
-                  z-index: 1;
-                }
-                .hover-button:hover::before {
-                  transform: translate(-20px, +10px);
-                  background-color: #fffa77;
-                  z-index: -1;
-                }
-              `}</style> */}
-            </button>
-          </a>
+          <div className="flex justify-end">
+            <a href="/blog">
+              <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
+                <span>More...</span>
+                <style jsx>{`
+                  .hover-button::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: transparent;
+                    transform: translate(0, 0);
+                    transition: transform 0.4s ease;
+                    z-index: 1;
+                  }
+                  .hover-button:hover::before {
+                    transform: translate(-20px, +10px);
+                    background-color: #fffa77;
+                    z-index: -1;
+                  }
+                `}</style>
+              </button>
+            </a>
+          </div>
         </div>
-        <div className="col-start-4">
+        <div className="col-start-6 col-span-4 relative -z-10">
           <Image
             src={dramatic}
             alt="quiz"
@@ -92,9 +95,9 @@ export default function StyleInspo() {
         </div>
       </div>
 
-      <div className="grid grid-cols-6">
-        <div className="mx-28 col-start-4 col-end-6">
-          <h1 className="bg-hotpink text-center text-2xl py-1 m-5 w-[36rem] ">
+      <div className="grid grid-cols-10">
+        <div className="col-start-5">
+          <h1 className="my-24 bg-hotpink text-center text-2xl py-1 w-[48rem] ">
             Romantic type
           </h1>
 
