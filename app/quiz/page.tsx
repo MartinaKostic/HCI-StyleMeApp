@@ -11,11 +11,13 @@ export default function Quiz() {
       <div className="absolute bg-pink rounded-full h-[20rem] w-[20rem] -top-24 -left-12"></div>
       <div className="flex justify-center m-5">
         <div className="absolute bg-pink rounded-full h-[25rem] w-[25rem] ml-28"></div>
-        <div className=" mt-32 z-10 grid grid-cols-3">
-          <div className="col-start-2">
+        <div className=" mt-32 z-10 grid grid-cols-4">
+          <div className="col-start-2 col-span-2 flex justify-center">
             <h1 className="bg-hotpink text-center text-2xl py-1 w-[36rem]">
               Take a quiz
             </h1>
+          </div>
+          <div className="col-start-2 col-span-2">
             <p className="text-center mt-10">
               Take this easy quiz and we will show you some of the most <br />
               flattering clothes for your shape this season, and share some
@@ -24,12 +26,12 @@ export default function Quiz() {
               <br /> work for you, so you enjoy getting dressed!
             </p>
           </div>
-          <div className="p-10">
+          <div className="p-">
             <Image src={quiz} alt="quiz" className="h-52 w-auto" />
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center ">
+      <div className="my-10 flex flex-col items-center ">
         <h1 className="bg-hotpink text-center text-2xl py-1 w-5/6 mb-5">
           Question 1
         </h1>
