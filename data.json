@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "username": "ivana",
+      "password": "martina"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "A",
+      "content": "Next.js is a popular React framework...",
+      "author": "John Doe",
+      "date": "2023-07-01",
+      "tags": ["Next.js", "React", "Web Development"],
+      "image": "/images/nextjs-blog.png"
+    },
+    {
+      "id": 2,
+      "title": "B",
+      "content": "Tailwind CSS is a utility-first CSS framework...",
+      "author": "Jane Smith",
+      "date": "2023-07-15",
+      "tags": ["Tailwind CSS", "CSS", "Web Design"],
+      "image": "/images/tailwindcss-blog.png"
+    },
+    {
+      "id": 3,
+      "title": "C",
+      "content": "Tailwind CSS is a utility-first CSS framework...",
+      "author": "Jane Smith",
+      "date": "2023-07-15",
+      "tags": ["Tailwind CSS", "CSS", "Web Design"],
+      "image": "/images/tailwindcss-blog.png"
+    },
+    {
+      "id": 4,
+      "title": "D",
+      "content": "Tailwind CSS is a utility-first CSS framework...",
+      "author": "Jane Smith",
+      "date": "2023-07-15",
+      "tags": ["Tailwind CSS", "CSS", "Web Design"],
+      "image": "/images/tailwindcss-blog.png"
+    },
+    {
+      "id": 1,
+      "title": "A",
+      "content": "Next.js is a popular React framework...",
+      "author": "John Doe",
+      "date": "2023-07-01",
+      "tags": ["Next.js", "React", "Web Development"],
+      "image": "/images/nextjs-blog.png"
+    }
+  ],
+
+  "styleinspo": [
+    {
+      "id": 1,
+      "title": "Getting Started with Next.js",
+      "content": "Next.js is a popular React framework...",
+      "author": "John Doe",
+      "date": "2023-07-01",
+      "tags": ["Next.js", "React", "Web Development"],
+      "image": "/images/nextjs-blog.png"
+    },
+    {
+      "id": 2,
+      "title": "Introduction to Tailwind CSS",
+      "content": "Tailwind CSS is a utility-first CSS framework...",
+      "author": "Jane Smith",
+      "date": "2023-07-15",
+      "tags": ["Tailwind CSS", "CSS", "Web Design"],
+      "image": "/images/tailwindcss-blog.png"
+    }
+  ],
+  "quiz": [
+    {
+      "questionText": "Which color is often associated with elegance?",
+      "answers": [
+        { "answerText": "Red", "id": 1 },
+        { "answerText": "Blue", "id": 2 },
+        { "answerText": "Black", "id": 3 },
+        { "answerText": "Yellow", "id": 4 },
+        { "answerText": "pink", "id": 5 }
+      ]
+    },
+    {
+      "questionText": "Which accessory can add a pop of color to your outfit?",
+      "answers": [
+        { "answerText": "Red", "id": 1 },
+        { "answerText": "Blue", "id": 2 },
+        { "answerText": "Black", "id": 3 },
+        { "answerText": "Yellow", "id": 4 },
+        { "answerText": "pink", "id": 5 }
+      ]
+    },
+    {
+      "questionText": "What is a little black dress often referred to as?",
+      "answers": [
+        { "answerText": "Red", "id": 1 },
+        { "answerText": "Blue", "id": 2 },
+        { "answerText": "Black", "id": 3 },
+        { "answerText": "Yellow", "id": 4 },
+        { "answerText": "pink", "id": 5 }
+      ]
+    }
+  ]
+}
