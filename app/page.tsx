@@ -9,40 +9,31 @@ import colorful from "../public/colorful.jpg";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useRouter } from "next/navigation";
+import globalStyles from "@/utils/global";
 
 export default function Home() {
   //dodaj krugove, linkove na botune glavne, namistit discover mroe botun, uskladit margine
+  const router = useRouter();
+
   return (
     <div>
       <Header></Header>
       <div className="grid grid-cols-3 h-128 text-center">
-        <div className=" grid grid-row content-center bg-green bg-opacity-30 z-10">
+        <div className="grid grid-row content-center bg-green bg-opacity-30 z-10">
           <div className="flex justify-center">
             <Image src={quiz} alt="quiz" className="h-52 w-auto " />
           </div>
           <h1 className="text-3xl ">Take a quiz</h1>
           <div className="flex justify-center">
-            <button className="border border-text_color m-10 h-10 w-[250px] relative hover-button">
+            <button
+              className="border border-text_color m-10 h-10 w-[250px] relative hover-button"
+              onClick={() => router.push("/quiz")}
+            >
               <span>Go to the section</span>
-              <style jsx>{`
-                .hover-button::before {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background-color: transparent;
-                  transform: translate(0, 0);
-                  transition: transform 0.4s ease;
-                  z-index: 1;
-                }
-                .hover-button:hover::before {
-                  transform: translate(-20px, +10px);
-                  background-color: #fffa77;
-                  z-index: -1;
-                }
-              `}</style>
+              <style jsx global>
+                {globalStyles}
+              </style>
             </button>
           </div>
         </div>
@@ -52,27 +43,14 @@ export default function Home() {
           </div>
           <h1 className="text-3xl ">Style Inspo</h1>
           <div className="flex justify-center">
-            <button className="border border-text_color m-10 h-10 w-[250px] relative hover-button">
+            <button
+              className="border border-text_color m-10 h-10 w-[250px] relative hover-button"
+              onClick={() => router.push("/styleinspo")}
+            >
               <span>Go to the section</span>
-              <style jsx>{`
-                .hover-button::before {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background-color: transparent;
-                  transform: translate(0, 0);
-                  transition: transform 0.4s ease;
-                  z-index: 1;
-                }
-                .hover-button:hover::before {
-                  transform: translate(-20px, +10px);
-                  background-color: #fffa77;
-                  z-index: -1;
-                }
-              `}</style>
+              <style jsx global>
+                {globalStyles}
+              </style>
             </button>
           </div>
         </div>
@@ -82,28 +60,14 @@ export default function Home() {
           </div>
           <h1 className="text-3xl ">Blog</h1>
           <div className="flex justify-center">
-            <button className="border border-text_color m-10 h-10 w-[250px] relative hover-button">
+            <button
+              className="border border-text_color m-10 h-10 w-[250px] relative hover-button"
+              onClick={() => router.push("/blog")}
+            >
               <span>Go to the section</span>
-              {/* radi ovoga ispod je useclient */}
-              <style jsx>{`
-                .hover-button::before {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background-color: transparent;
-                  transform: translate(0, 0);
-                  transition: transform 0.4s ease;
-                  z-index: 1;
-                }
-                .hover-button:hover::before {
-                  transform: translate(-20px, +10px);
-                  background-color: #fffa77;
-                  z-index: -1;
-                }
-              `}</style>
+              <style jsx global>
+                {globalStyles}
+              </style>
             </button>
           </div>
         </div>
@@ -174,25 +138,9 @@ export default function Home() {
           <a href="/blog" className="absolute my-10 right-0">
             <button className="border border-text_color h-10 w-[250px] relative hover-button text-lg">
               <span>Discover more</span>
-              <style jsx>{`
-                .hover-button::before {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background-color: transparent;
-                  transform: translate(0, 0);
-                  transition: transform 0.4s ease;
-                  z-index: 1;
-                }
-                .hover-button:hover::before {
-                  transform: translate(-20px, +10px);
-                  background-color: #fffa77;
-                  z-index: -1;
-                }
-              `}</style>
+              <style jsx global>
+                {globalStyles}
+              </style>
             </button>
           </a>
         </div>

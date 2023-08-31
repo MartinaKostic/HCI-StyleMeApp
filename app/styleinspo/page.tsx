@@ -6,6 +6,7 @@ import romantic from "../../public/romantic.jpg";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { BsSearch } from "react-icons/bs";
+import globalStyles from "@/utils/global";
 //CENTRIRAN NASLOV!
 export default function StyleInspo() {
   return (
@@ -27,7 +28,7 @@ export default function StyleInspo() {
               <br /> and start putting together outfits you enjoy wearing!
             </p>
             <div className="flex justify-center m-3">
-              <div className="border border-text_color flex px-1 w-72">
+              <div className="border border-text_color flex px-1 w-72 m-5">
                 <span className="pt-3 px-1">
                   <BsSearch />
                 </span>
@@ -65,25 +66,9 @@ export default function StyleInspo() {
             <a href="/blog">
               <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
                 <span>More...</span>
-                <style jsx>{`
-                  .hover-button::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: transparent;
-                    transform: translate(0, 0);
-                    transition: transform 0.4s ease;
-                    z-index: 1;
-                  }
-                  .hover-button:hover::before {
-                    transform: translate(-20px, +10px);
-                    background-color: #fffa77;
-                    z-index: -1;
-                  }
-                `}</style>
+                <style jsx global>
+                  {globalStyles}
+                </style>
               </button>
             </a>
           </div>
@@ -121,25 +106,9 @@ export default function StyleInspo() {
             <a href="/blog">
               <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
                 <span>More...</span>
-                <style jsx>{`
-                  .hover-button::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: transparent;
-                    transform: translate(0, 0);
-                    transition: transform 0.4s ease;
-                    z-index: 1;
-                  }
-                  .hover-button:hover::before {
-                    transform: translate(-20px, +10px);
-                    background-color: #fffa77;
-                    z-index: -1;
-                  }
-                `}</style>
+                <style jsx global>
+                  {globalStyles}
+                </style>
               </button>
             </a>
           </div>
