@@ -1,10 +1,27 @@
 "use client";
+import quizimage from "@/public/04.png";
 import Image from "next/image";
-import quiz from "../../public/04.png";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import axios from "axios";
+import React from "react";
+import globalStyles from "@/utils/global";
+
 export default function Quiz() {
   //ubacit jos krugova
+  const [quiz, setQuiz] = React.useState([]);
+
+  //dohvati sva pitanja
+  React.useEffect(() => {
+    refetchQuiz();
+  }, []);
+
+  function refetchQuiz() {
+    axios.get("http://localhost:3003/quiz").then((res) => {
+      setQuiz(res.data);
+    });
+  }
+
   return (
     <div>
       <Header></Header>
@@ -26,40 +43,31 @@ export default function Quiz() {
               <br /> work for you, so you enjoy getting dressed!
             </p>
           </div>
-          <div className="p-">
-            <Image src={quiz} alt="quiz" className="h-52 w-auto" />
+          <div className="p-5">
+            <Image src={quizimage} alt="quiz" className="h-52 w-auto" />
           </div>
         </div>
       </div>
-      <div className="my-10 flex flex-col items-center ">
-        <h1 className="bg-hotpink text-center text-2xl py-1 w-5/6 mb-5">
-          Question 1
-        </h1>
 
-        <button className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button">
-          Answer5
-          <style jsx>{`
-            .hover-button::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: transparent;
-              transform: translate(0, 0);
-              transition: transform 0.5s ease;
-              z-index: 1;
-            }
-            .hover-button:hover::before {
-              transform: translate(-20px, +10px);
-              background-color: #fffa77;
-              z-index: -1;
-            }
-          `}</style>
-        </button>
-
-        <button className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button">
+      {quiz.map((question: any) => (
+        <div key={question.index} className="my-10 flex flex-col items-center ">
+          <h1 className="bg-hotpink text-center text-2xl py-1 w-5/6 mb-5">
+            {question.questionText}
+          </h1>
+          {question.answers.map((answer: any) => (
+            <button
+              key={answer.index}
+              className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button"
+            >
+              {answer.answerText}
+              <style jsx global>
+                {globalStyles}
+              </style>
+            </button>
+          ))}
+        </div>
+      ))}
+      {/* <button className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button">
           Answer1
           <style jsx>{`
             .hover-button::before {
@@ -146,8 +154,8 @@ export default function Quiz() {
               z-index: -1;
             }
           `}</style>
-        </button>
-      </div>
+        </button> */}
+
       <Footer></Footer>
     </div>
   );
