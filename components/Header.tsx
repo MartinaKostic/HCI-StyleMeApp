@@ -1,6 +1,11 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const Header = () => {
   //hover i active klase
+  const pathname = usePathname();
+
   return (
     <>
       <div className="absolute w-full h-20 bg-transparent top-0 z-50">
@@ -8,34 +13,36 @@ const Header = () => {
           <div className="flex justify-between items-center h-full text-2xl">
             styleme
             <ul className="flex gap-x-6 text-lg ">
-              <li className="mx-3">
-                <Link href="/">
-                  <p>home</p>
+              <li className={`mx-3 ${pathname === "/" ? "active" : ""}`}>
+                <Link href="/" className="">
+                  <p className="nav-link">home</p>
                 </Link>
               </li>
-              <li className="mx-3">
+              <li className={`mx-3 ${pathname === "/quiz" ? "active" : ""}`}>
                 <Link href="/quiz">
-                  <p>quiz</p>
+                  <p className="nav-link">quiz</p>
                 </Link>
               </li>
-              <li className="mx-3">
+              <li
+                className={`mx-3 ${pathname === "/styleinspo" ? "active" : ""}`}
+              >
                 <Link href="/styleinspo">
-                  <p>style inspo</p>
+                  <p className="nav-link">style inspo</p>
                 </Link>
               </li>
-              <li className="mx-3">
+              <li className={`mx-3 ${pathname === "/blog" ? "active" : ""}`}>
                 <Link href="/blog">
-                  <p>blog</p>
+                  <p className="nav-link">blog</p>
                 </Link>
               </li>
-              <li className="mx-3">
+              <li className={`mx-3 ${pathname === "/blog" ? "active" : ""}`}>
                 <Link href="/signup">
-                  <p>sign up</p>
+                  <p className="nav-link">sign up</p>
                 </Link>
               </li>
-              <li className="mx-3">
+              <li className={`mx-3 ${pathname === "/blog" ? "active" : ""}`}>
                 <Link href="/contactus">
-                  <p>contact us</p>
+                  <p className="nav-link">contact us</p>
                 </Link>
               </li>
             </ul>
