@@ -9,7 +9,10 @@ import globalStyles from "@/utils/global";
 
 export default function Quiz() {
   //ubacit jos krugova
-  const [quiz, setQuiz] = React.useState([]);
+  const [quiz, setQuiz] = React.useState<any[]>([]);
+  const [selectedAnswers, setSelectedAnswers] = React.useState<{
+    [key: number]: number;
+  }>({});
 
   //dohvati sva pitanja
   React.useEffect(() => {
@@ -21,6 +24,30 @@ export default function Quiz() {
       setQuiz(res.data);
     });
   }
+
+  const handleAnswerSelect = (questionIndex: number, answerId: number) => {
+    setSelectedAnswers((prevSelectedAnswers) => ({
+      ...prevSelectedAnswers,
+      [questionIndex]: answerId,
+    }));
+  };
+
+  const calculateResult = () => {
+    const answerCount: { [key: number]: number } = {};
+
+    // zbroji koliko je tocno tih odgovora
+    for (const answerId of Object.values(selectedAnswers)) {
+      answerCount[answerId] = (answerCount[answerId] || 0) + 1;
+    }
+
+    // nadi onaj koji je najvise odgovaran
+    //parseint zato sta .keys vraca niz stringova
+    const mostSelectedAnswerId = Object.keys(answerCount).reduce((a, b) =>
+      answerCount[parseInt(a)] > answerCount[parseInt(b)] ? a : b
+    );
+    console.log(mostSelectedAnswerId);
+    return mostSelectedAnswerId;
+  };
 
   return (
     <div>
@@ -58,6 +85,7 @@ export default function Quiz() {
             <button
               key={answer.index}
               className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button"
+              onClick={() => handleAnswerSelect(question.index, answer.id)}
             >
               {answer.answerText}
               <style jsx global>
@@ -67,94 +95,7 @@ export default function Quiz() {
           ))}
         </div>
       ))}
-      {/* <button className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button">
-          Answer1
-          <style jsx>{`
-            .hover-button::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: transparent;
-              transform: translate(0, 0);
-              transition: transform 0.5s ease;
-              z-index: 1;
-            }
-            .hover-button:hover::before {
-              transform: translate(-20px, +10px);
-              background-color: #fffa77;
-              z-index: -1;
-            }
-          `}</style>
-        </button>
-        <button className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button">
-          Answer4
-          <style jsx>{`
-            .hover-button::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: transparent;
-              transform: translate(0, 0);
-              transition: transform 0.5s ease;
-              z-index: 1;
-            }
-            .hover-button:hover::before {
-              transform: translate(-20px, +10px);
-              background-color: #fffa77;
-              z-index: -1;
-            }
-          `}</style>
-        </button>
-        <button className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button">
-          Answer2
-          <style jsx>{`
-            .hover-button::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: transparent;
-              transform: translate(0, 0);
-              transition: transform 0.5s ease;
-              z-index: 1;
-            }
-            .hover-button:hover::before {
-              transform: translate(-20px, +10px);
-              background-color: #fffa77;
-              z-index: -1;
-            }
-          `}</style>
-        </button>
-        <button className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button">
-          Answer3
-          <style jsx>{`
-            .hover-button::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: transparent;
-              transform: translate(0, 0);
-              transition: transform 0.5s ease;
-              z-index: 1;
-            }
-            .hover-button:hover::before {
-              transform: translate(-20px, +10px);
-              background-color: #fffa77;
-              z-index: -1;
-            }
-          `}</style>
-        </button> */}
+      <button onClick={calculateResult}>Calculate Result</button>
 
       <Footer></Footer>
     </div>
