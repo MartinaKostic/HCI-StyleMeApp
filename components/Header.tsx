@@ -35,12 +35,14 @@ const Header = () => {
                   <p className="nav-link">blog</p>
                 </Link>
               </li>
-              <li className={`mx-3 ${pathname === "/blog" ? "active" : ""}`}>
+              <li className={`mx-3 ${pathname === "/signup" ? "active" : ""}`}>
                 <Link href="/signup">
                   <p className="nav-link">sign up</p>
                 </Link>
               </li>
-              <li className={`mx-3 ${pathname === "/blog" ? "active" : ""}`}>
+              <li
+                className={`mx-3 ${pathname === "/contactus" ? "active" : ""}`}
+              >
                 <Link href="/contactus">
                   <p className="nav-link">contact us</p>
                 </Link>

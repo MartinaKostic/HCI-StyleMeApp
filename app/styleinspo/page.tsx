@@ -73,7 +73,7 @@ export default function StyleInspo() {
             </a>
           </div>
         </div>
-        <div className="col-start-6 col-span-4 relative -z-10">
+        <div className="col-start-6 col-span-4 ">
           <Image
             src={dramatic}
             alt="quiz"
@@ -88,14 +88,14 @@ export default function StyleInspo() {
             Romantic type
           </h1>
         </div>
-        <div className="col-start-2 col-span-4 ">
+        <div className="ml-24 col-start-2 col-span-4">
           <Image
             src={romantic}
             alt="quiz"
             className="h-72 object-cover"
           ></Image>
         </div>
-        <div className="col-start-6 col-span-4 m-5 mx-16">
+        <div className="col-start-6 col-span-4 m-5 mr-16">
           <p>
             The Dramatic ID needs to embrace their sharpness and therefore their
             clothing should also have a sharp and geometric feel to it. The

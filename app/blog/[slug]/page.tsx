@@ -1,14 +1,17 @@
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
-export default function BlogPost() {
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+
+export default function BlogPost({ params }: Params) {
   return (
     <div>
       <Header></Header>
+
       <div className="flex justify-center m-5">
         <div className="absolute bg-pink rounded-full h-[25rem] w-[25rem] ml-28"></div>
         <div className=" mt-32 z-10 flex justify-center">
           <h1 className="bg-hotpink text-center text-2xl py-1 w-[36rem]">
-            Tenniscore trend
+            {params.slug}
           </h1>
         </div>
       </div>

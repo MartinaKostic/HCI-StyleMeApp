@@ -3,8 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import blog from "../../public/02.png";
-import dramatic from "../../public/dramatic.jpg";
-import romantic from "../../public/romantic.jpg";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { BsSearch } from "react-icons/bs";
@@ -31,6 +29,7 @@ export default function Blog() {
   return (
     <div>
       <Header></Header>
+
       <div className="absolute bg-pink rounded-full h-[20rem] w-[20rem] -top-24 -left-12"></div>
       <div className="flex justify-center m-5">
         <div className="absolute bg-pink rounded-full h-[25rem] w-[25rem] ml-28"></div>
@@ -77,59 +76,53 @@ export default function Blog() {
       </div>
       {blogs.map((blog: any, index: number) =>
         index % 2 === 0 ? (
-          <div key={index} className="my-10 grid grid-cols-10">
+          <div key={index} className="mb-20 grid grid-cols-10">
             <div className="col-start-2 col-span-5">
               <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
-                Dramatic type
+                {blog.title}
               </h1>
             </div>
             <div className="col-start-2 col-span-4 m-5 mx-16">
-              <p>
-                The Dramatic ID needs to embrace their sharpness and therefore
-                their clothing should also have a sharp and geometric feel to
-                it. The Dramatics, in my opinion, are really able to lean into a
-                lot of high-fashion trends...
-              </p>
+              <p>{blog.content.slice(0, 350)}...</p>
               <div className="flex justify-end">
-                <a href="/blog">
+                <Link href={`/blog/${blog.title}`}>
                   <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
                     <span>More...</span>
                     <style jsx global>
                       {globalStyles}
                     </style>
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
-            <div className="col-start-6 col-span-4 relative -z-10">
+            <div className="h-72 w-128 relative col-start-6 col-span-4">
               <Image
-                src={dramatic}
-                alt="quiz"
-                className="h-72 object-cover"
+                src={`/${blog.image}`}
+                alt="blog_image"
+                fill={true}
+                style={{ objectFit: "cover" }}
               ></Image>
             </div>
           </div>
         ) : (
-          <div key={index} className="my-10 grid grid-cols-10">
+          <div key={index} className="mb-20 grid grid-cols-10">
             <div className="col-start-5 col-span-5">
               <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
-                Romantic type
+                {blog.title}
               </h1>
             </div>
-            <div className="col-start-2 col-span-4 ">
+            <div className="ml-24 h-72 w-128 relative col-start-2 col-span-4">
               <Image
-                src={romantic}
-                alt="quiz"
-                className="h-72 object-cover"
+                src={`/${blog.image}`}
+                alt="blog_image"
+                // height={288}
+                // width={400}
+                fill={true}
+                style={{ objectFit: "cover" }}
               ></Image>
             </div>
-            <div className="col-start-6 col-span-4 m-5 mx-16">
-              <p>
-                The Dramatic ID needs to embrace their sharpness and therefore
-                their clothing should also have a sharp and geometric feel to
-                it. The Dramatics, in my opinion, are really able to lean into a
-                lot of high-fashion trends...
-              </p>
+            <div className="col-start-6 col-span-4 m-5 mr-16">
+              <p>{blog.content.slice(0, 350)}...</p>
               <div className="flex justify-end">
                 <a href="/blog">
                   <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">

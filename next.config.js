@@ -2,7 +2,8 @@
 const nextConfig = {};
 module.exports = {
   images: {
-    domains: ["localhost"],
+    //domains: ["localhost"],
+    loader: "imgix",
   },
 };
 module.exports = nextConfig;

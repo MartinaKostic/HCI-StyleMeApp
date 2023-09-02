@@ -9,11 +9,11 @@
     {
       "id": 1,
       "title": "A",
-      "content": "Next.js is a popular React framework...",
+      "content": "Next.js is a popular React framework ankncaskcnaskcnasnc  mcadxm sdl kld l kwe  vrovoror kv kvmmm wkwkkw ekfm vv lkd vnklskewskc k fdm vk k owppwpwpwp krkrkkrThe decision is final: Metallic eyeshadow reigns as the ultimate makeup trend       this season. Summer presents the ideal opportunity for exploring fresh looks, and theres no better choice than this.      Navigating through the options to determine the most suitable products for a new venture caž      n be quite a task. Thus, we have assumed the responsibility of identifying five stunning metallic eyeshadows in shades perfect for summer. Prepare to radiate throughout the season. Embrace the shimmer and shine, as this summer is dedicated to all the enthusiasts of luminous beauty.The decision is final: Metallic eyeshadow reigns as the ultimate makeup trend this season. Summer presents the ideal opportunity for exploring fresh looks, and theres no better choice than this.Navigating through the options to determine the most suitable products for a new venture can be quite a task. Thus, we have assumed the responsibility of identifying five stunning metallic eyeshadows in shades perfect for summer. Prepare to radiate throughout the season. Embrace the shimmer and shine, as this summer is dedicated to all the enthusiasts of luminous beauty.The decision is final: Metallic eyeshadow reigns as the ultimate makeup trend this season. Summer presents the ideal opportunity for exploring fresh looks, and theres no better choice than this.Navigating through the options to determine the most suitable products for a new venture can be quite a task. Thus, we have assumed the responsibility of identifying five stunning metallic eyeshadows in shades perfect for summer. Prepare to radiate throughout the season. Embrace the shimmer and shine, as this summer is dedicated to all the enthusiasts of luminous beauty",
       "author": "John Doe",
       "date": "2023-07-01",
       "tags": ["Next.js", "React", "Web Development"],
-      "image": "/images/nextjs-blog.png"
+      "image": "kat.jpg"
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "author": "Jane Smith",
       "date": "2023-07-15",
       "tags": ["Tailwind CSS", "CSS", "Web Design"],
-      "image": "/images/tailwindcss-blog.png"
+      "image": "kat.jpg"
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "author": "Jane Smith",
       "date": "2023-07-15",
       "tags": ["Tailwind CSS", "CSS", "Web Design"],
-      "image": "/images/tailwindcss-blog.png"
+      "image": "kat.jpg"
     },
     {
       "id": 4,
@@ -40,7 +40,7 @@
       "author": "Jane Smith",
       "date": "2023-07-15",
       "tags": ["Tailwind CSS", "CSS", "Web Design"],
-      "image": "/images/tailwindcss-blog.png"
+      "image": "kat.jpg"
     },
     {
       "id": 1,
@@ -49,7 +49,7 @@
       "author": "John Doe",
       "date": "2023-07-01",
       "tags": ["Next.js", "React", "Web Development"],
-      "image": "/images/nextjs-blog.png"
+      "image": "kat.jpg"
     }
   ],
 
@@ -86,6 +86,36 @@
     },
     {
       "questionText": "Which accessory can add a pop of color to your outfit?",
+      "answers": [
+        { "answerText": "Red", "id": 1 },
+        { "answerText": "Blue", "id": 2 },
+        { "answerText": "Black", "id": 3 },
+        { "answerText": "Yellow", "id": 4 },
+        { "answerText": "pink", "id": 5 }
+      ]
+    },
+    {
+      "questionText": "What is a little black dress often referred to as?",
+      "answers": [
+        { "answerText": "Red", "id": 1 },
+        { "answerText": "Blue", "id": 2 },
+        { "answerText": "Black", "id": 3 },
+        { "answerText": "Yellow", "id": 4 },
+        { "answerText": "pink", "id": 5 }
+      ]
+    },
+    {
+      "questionText": "What is a little black dress often referred to as?",
+      "answers": [
+        { "answerText": "Red", "id": 1 },
+        { "answerText": "Blue", "id": 2 },
+        { "answerText": "Black", "id": 3 },
+        { "answerText": "Yellow", "id": 4 },
+        { "answerText": "pink", "id": 5 }
+      ]
+    },
+    {
+      "questionText": "What is a little black dress often referred to as?",
       "answers": [
         { "answerText": "Red", "id": 1 },
         { "answerText": "Blue", "id": 2 },
