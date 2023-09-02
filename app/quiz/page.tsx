@@ -13,6 +13,7 @@ export default function Quiz() {
   const [selectedAnswers, setSelectedAnswers] = React.useState<{
     [key: number]: number;
   }>({});
+  const [currentQuestion, setCurrentQuestion] = React.useState<number>(0);
 
   //dohvati sva pitanja
   React.useEffect(() => {
@@ -31,6 +32,15 @@ export default function Quiz() {
       [questionIndex]: answerId,
     }));
   };
+  const isCurrentQuestionAnswered =
+    selectedAnswers[currentQuestion] !== undefined;
+
+  const handleNextQuestion = () => {
+    //na sljedece pitanje
+    setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+  };
+
+  const allQuestionsAnswered = currentQuestion === quiz.length - 1;
 
   const calculateResult = () => {
     const answerCount: { [key: number]: number } = {};
@@ -76,16 +86,19 @@ export default function Quiz() {
         </div>
       </div>
 
-      {quiz.map((question: any) => (
-        <div key={question.index} className="my-10 flex flex-col items-center ">
+      {quiz[currentQuestion] && (
+        <div
+          key={currentQuestion}
+          className="my-10 flex flex-col items-center "
+        >
           <h1 className="bg-hotpink text-center text-2xl py-1 w-5/6 mb-5">
-            {question.questionText}
+            {quiz[currentQuestion].questionText}
           </h1>
-          {question.answers.map((answer: any) => (
+          {quiz[currentQuestion].answers.map((answer: any) => (
             <button
               key={answer.index}
               className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button"
-              onClick={() => handleAnswerSelect(question.index, answer.id)}
+              onClick={() => handleAnswerSelect(currentQuestion, answer.id)}
             >
               {answer.answerText}
               <style jsx global>
@@ -94,8 +107,18 @@ export default function Quiz() {
             </button>
           ))}
         </div>
-      ))}
-      <button onClick={calculateResult}>Calculate Result</button>
+      )}
+      {!allQuestionsAnswered && (
+        <button
+          onClick={handleNextQuestion}
+          disabled={!isCurrentQuestionAnswered}
+        >
+          Next
+        </button>
+      )}
+      {allQuestionsAnswered && (
+        <button onClick={calculateResult}>Calculate Result</button>
+      )}
 
       <Footer></Footer>
     </div>
