@@ -1,40 +1,66 @@
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
+import Image from "next/image";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
 export default function BlogPost({ params }: Params) {
   return (
     <div>
       <Header></Header>
-
+      <div className="absolute bg-pink rounded-full h-[20rem] w-[20rem] -top-24 -left-12"></div>
       <div className="flex justify-center m-5">
-        <div className="absolute bg-pink rounded-full h-[25rem] w-[25rem] ml-28"></div>
-        <div className=" mt-32 z-10 flex justify-center">
-          <h1 className="bg-hotpink text-center text-2xl py-1 w-[36rem]">
-            {params.slug}
-          </h1>
+        <div className=" mt-32 z-10 grid grid-cols-4">
+          <div className="col-start-2 col-span-2 flex justify-center">
+            <h1 className="bg-hotpink text-center text-2xl py-1 w-[36rem]">
+              {params.slug}
+            </h1>
+          </div>
+          <div className="col-start-2 col-span-2">
+            <p className="text-center mt-10">INTRO</p>
+            <div className="h-72 w-128 relative col-start-6 col-span-4">
+              PICTURE
+              <Image
+                src="/kat.jpg"
+                alt="blog_image"
+                fill={true}
+                style={{ objectFit: "cover" }}
+              ></Image>
+            </div>
+          </div>
         </div>
       </div>
-      <p className="">
-        In case you haven't noticed preppy athleisure is everywhere right now.
-        Quickly coined "tenniscore," the latest street style trend is the
-        perfect mix of modern-day fashion and nostalgia. In line with fashion's
-        current throwback obsession, tenniscore combines modern athleisure with
-        the vintage country club aesthetic. Marked by mini skirts, cable knit
-        sweaters, loafers, and tube socks (all of course in white) it's an
-        effortless style marriage of fashion and athletics. Undoubtedly,
-        tenniscore is poised to take over this fall. With influencers and
-        supermodels alike sporting the street style trend. And of course,
-        vintage fanatic Bella Hadid caught on. The supermodel was recently
-        spotted in New York sporting an ultra-chic Burberry mini skirt, sweater,
-        and loafers, completing the look with stark white tube socks. Yet it
-        hasn't just been celebrity street style, the designers themselves are
-        catching wind. Most recently, Miu Miu brought their A-game to New York's
-        grassy courts at the West Side Tennis Club, promoting their latest
-        tennis-inspired line. It seems the latest vintage sportswear trend is
-        here to stay. Here, L'OFFICIEL rounds up preppy tenniscore looks to
-        channel this season.
-      </p>
+      {/* Blog content */}
+      <div className="container mx-auto py-8">
+        {/* Blog points */}
+        <section className="mb-8">
+          <ol className="list-decimal pl-6">
+            <li className="mb-4">
+              <p>Point 1: Describe your first styling point here.</p>
+              {/* You can also include images within each point */}
+              {/* <img
+                src="/path/to/your/image.jpg"
+                alt="Point 1 Image"
+                className="mt-4"
+              /> */}
+            </li>
+            {/* Repeat the structure for points 2 to 5 */}
+            <li className="mb-4">
+              <p>Point 2: Describe your second styling point here.</p>
+              {/* Image for Point 2 */}
+            </li>
+            {/* Repeat for points 3 to 5 */}
+          </ol>
+        </section>
+
+        {/* Conclusion */}
+        <section>
+          <h2 className="text-3xl font-semibold">Conclusion</h2>
+          <p>
+            Summarize the key takeaways from your blog post and encourage
+            readers to take action or explore related content.
+          </p>
+        </section>
+      </div>
       <Footer></Footer>
     </div>
   );
