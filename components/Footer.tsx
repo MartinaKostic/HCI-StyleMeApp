@@ -10,8 +10,8 @@ const Footer = () => {
       <footer className="bg-pink p-7 text-center bottom-0 w-full">
         <div className="flex justify-between h-full text-2xl">
           <div className=""> styleme</div>
-          <div className="">
-            Follow us:
+          <div className="flex flex-col items-center">
+            <div className="mb-3">Follow us:</div>
             <div className="flex flex-row mt-3">
               <div className="p-2">
                 <FaFacebookSquare />

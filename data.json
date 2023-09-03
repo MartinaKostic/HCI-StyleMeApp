@@ -7,46 +7,77 @@
   ],
   "blogs": [
     {
-      "id": 1,
       "title": "A",
-      "content": "Next.js is a popular React framework ankncaskcnaskcnasnc  mcadxm sdl kld l kwe  vrovoror kv kvmmm wkwkkw ekfm vv lkd vnklskewskc k fdm vk k owppwpwpwp krkrkkrThe decision is final: Metallic eyeshadow reigns as the ultimate makeup trend       this season. Summer presents the ideal opportunity for exploring fresh looks, and theres no better choice than this.      Navigating through the options to determine the most suitable products for a new venture caž      n be quite a task. Thus, we have assumed the responsibility of identifying five stunning metallic eyeshadows in shades perfect for summer. Prepare to radiate throughout the season. Embrace the shimmer and shine, as this summer is dedicated to all the enthusiasts of luminous beauty.The decision is final: Metallic eyeshadow reigns as the ultimate makeup trend this season. Summer presents the ideal opportunity for exploring fresh looks, and theres no better choice than this.Navigating through the options to determine the most suitable products for a new venture can be quite a task. Thus, we have assumed the responsibility of identifying five stunning metallic eyeshadows in shades perfect for summer. Prepare to radiate throughout the season. Embrace the shimmer and shine, as this summer is dedicated to all the enthusiasts of luminous beauty.The decision is final: Metallic eyeshadow reigns as the ultimate makeup trend this season. Summer presents the ideal opportunity for exploring fresh looks, and theres no better choice than this.Navigating through the options to determine the most suitable products for a new venture can be quite a task. Thus, we have assumed the responsibility of identifying five stunning metallic eyeshadows in shades perfect for summer. Prepare to radiate throughout the season. Embrace the shimmer and shine, as this summer is dedicated to all the enthusiasts of luminous beauty",
-      "author": "John Doe",
+      "content": [
+        {
+          "point": "1. Use the bandana as a hair tie",
+          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+        },
+        {
+          "point": "2. Bandana as a headband",
+          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+        }
+      ],
       "date": "2023-07-01",
-      "tags": ["Next.js", "React", "Web Development"],
       "image": "kat.jpg"
     },
     {
-      "id": 2,
       "title": "B",
-      "content": "Tailwind CSS is a utility-first CSS framework...",
-      "author": "Jane Smith",
+      "content": [
+        {
+          "point": "1. Use the bandana as a hair tie",
+          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+        },
+        {
+          "point": "2. Bandana as a headband",
+          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+        }
+      ],
       "date": "2023-07-15",
-      "tags": ["Tailwind CSS", "CSS", "Web Design"],
       "image": "kat.jpg"
     },
     {
-      "id": 3,
       "title": "C",
-      "content": "Tailwind CSS is a utility-first CSS framework...",
-      "author": "Jane Smith",
+      "content": [
+        {
+          "point": "1. Use the bandana as a hair tie",
+          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+        },
+        {
+          "point": "2. Bandana as a headband",
+          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+        }
+      ],
       "date": "2023-07-15",
-      "tags": ["Tailwind CSS", "CSS", "Web Design"],
       "image": "kat.jpg"
     },
     {
-      "id": 4,
       "title": "D",
-      "content": "Tailwind CSS is a utility-first CSS framework...",
-      "author": "Jane Smith",
+      "content": [
+        {
+          "point": "1. Use the bandana as a hair tie",
+          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+        },
+        {
+          "point": "2. Bandana as a headband",
+          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+        }
+      ],
       "date": "2023-07-15",
-      "tags": ["Tailwind CSS", "CSS", "Web Design"],
       "image": "kat.jpg"
     },
     {
-      "id": 1,
       "title": "A",
-      "content": "Next.js is a popular React framework...",
-      "author": "John Doe",
+      "content": [
+        {
+          "point": "1. Use the bandana as a hair tie",
+          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+        },
+        {
+          "point": "2. Bandana as a headband",
+          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+        }
+      ],
       "date": "2023-07-01",
       "tags": ["Next.js", "React", "Web Development"],
       "image": "kat.jpg"
@@ -55,21 +86,17 @@
 
   "styleinspo": [
     {
-      "id": 1,
       "title": "Getting Started with Next.js",
       "content": "Next.js is a popular React framework...",
       "author": "John Doe",
       "date": "2023-07-01",
-      "tags": ["Next.js", "React", "Web Development"],
       "image": "/images/nextjs-blog.png"
     },
     {
-      "id": 2,
       "title": "Introduction to Tailwind CSS",
       "content": "Tailwind CSS is a utility-first CSS framework...",
       "author": "Jane Smith",
       "date": "2023-07-15",
-      "tags": ["Tailwind CSS", "CSS", "Web Design"],
       "image": "/images/tailwindcss-blog.png"
     }
   ],

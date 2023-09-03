@@ -26,6 +26,7 @@ export default function Home() {
           </div>
           <h1 className="text-3xl ">Take a quiz</h1>
           <div className="flex justify-center">
+            {/* USE CLIENT: */}
             <button
               className="border border-text_color m-10 h-10 w-[250px] relative hover-button"
               onClick={() => router.push("/quiz")}
@@ -43,11 +44,13 @@ export default function Home() {
           </div>
           <h1 className="text-3xl ">Style Inspo</h1>
           <div className="flex justify-center">
+            {/* USE CLIENT */}
             <button
               className="border border-text_color m-10 h-10 w-[250px] relative hover-button"
               onClick={() => router.push("/styleinspo")}
             >
               <span>Go to the section</span>
+              {/* USE CLIENT MAYBE? */}
               <style jsx global>
                 {globalStyles}
               </style>

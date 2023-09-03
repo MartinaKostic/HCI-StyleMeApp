@@ -19,4 +19,9 @@ export default css.global`
     background-color: #fffa77;
     z-index: -1;
   }
+  .hover-button.clicked::before {
+    transform: translate(-20px, +10px);
+    background-color: #fffa77;
+    z-index: -1;
+  }
 `;
