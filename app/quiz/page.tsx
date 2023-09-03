@@ -14,6 +14,7 @@ export default function Quiz() {
     [key: number]: number;
   }>({});
   const [currentQuestion, setCurrentQuestion] = React.useState<number>(0);
+  const [clickedButton, setClickedButton] = React.useState<number | null>(null);
 
   //dohvati sva pitanja
   React.useEffect(() => {
@@ -31,13 +32,18 @@ export default function Quiz() {
       ...prevSelectedAnswers,
       [questionIndex]: answerId,
     }));
+    if (clickedButton === answerId) {
+      setClickedButton(null);
+    } else {
+      setClickedButton(answerId);
+    }
   };
-  const isCurrentQuestionAnswered =
-    selectedAnswers[currentQuestion] !== undefined;
+  const isCurrentQuestionAnswered = clickedButton !== null;
 
-  const handleNextQuestion = () => {
+  const handleNextQuestion = (): void => {
     //na sljedece pitanje
     setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+    setClickedButton(null);
   };
 
   const allQuestionsAnswered = currentQuestion === quiz.length - 1;
@@ -97,7 +103,9 @@ export default function Quiz() {
           {quiz[currentQuestion].answers.map((answer: any) => (
             <button
               key={answer.index}
-              className="border border-text_color flex p-3 m-3 w-3/5 relative hover-button"
+              className={`border border-text_color flex p-3 m-3 w-3/5 relative hover-button ${
+                clickedButton === answer.id ? "clicked" : ""
+              }`}
               onClick={() => handleAnswerSelect(currentQuestion, answer.id)}
             >
               {answer.answerText}
