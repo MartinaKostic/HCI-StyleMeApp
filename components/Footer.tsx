@@ -7,7 +7,7 @@ const Footer = () => {
   //napravit da je follow us u centru, styleme and contact us na krajevima
   return (
     <>
-      <footer className="bg-pink p-7 text-center bottom-0 w-full">
+      <footer className="bg-pink p-4 text-center bottom-0 w-full">
         <div className="flex justify-between h-full text-2xl">
           <div className="basis-60 flex justify-start"> styleme</div>
           <div className="flex flex-col items-center">

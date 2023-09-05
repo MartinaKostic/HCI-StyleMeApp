@@ -15,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="min-h-screen bg-background text-text_color">
+    <html
+      lang="en"
+      className="min-h-screen bg-background text-text_color relative z-[1]"
+    >
       <body className={marmelad.className}>{children}</body>
     </html>
   );

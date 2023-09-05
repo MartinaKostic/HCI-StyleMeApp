@@ -148,7 +148,9 @@ export default function Home() {
           </a>
         </div>
       </div>
-
+      <div className="absolute h-[40rem] w-[40rem] -right-0 bottom-0 -z-[10] overflow-hidden">
+        <div className="bg-pink rounded-full w-full h-full absolute -right-36 -bottom-3"></div>
+      </div>
       <Footer></Footer>
     </div>
   );

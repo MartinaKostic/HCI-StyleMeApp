@@ -29,7 +29,7 @@ export default function Blog() {
       <Header></Header>
 
       <div className="absolute bg-pink rounded-full h-[20rem] w-[20rem] -top-24 -left-12"></div>
-      <div className="flex justify-center m-5">
+      <div className="flex justify-center m-5 ">
         <div className="absolute bg-pink rounded-full h-[25rem] w-[25rem] ml-28"></div>
         <div className="mt-32 z-10 grid grid-cols-4">
           <div className="col-start-2 col-span-2 flex justify-center">
@@ -72,79 +72,84 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      {blogs.map((blog: any, index: number) =>
-        index % 2 === 0 ? (
-          <div key={index} className="mb-20 grid grid-cols-10">
-            <div className="col-start-2 col-span-5">
-              <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
-                {blog.title}
-              </h1>
-            </div>
-            <div className="col-start-2 col-span-4 m-5 mx-16">
-              <p>
-                {blog.content
-                  .map((paragraph: any) => paragraph.description)
-                  .slice(0, 350)}
-                ...
-              </p>
-              <div className="flex justify-end">
-                <Link href={`/blog/${blog.title}`}>
-                  <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
-                    <span>More...</span>
-                    <style jsx global>
-                      {globalStyles}
-                    </style>
-                  </button>
-                </Link>
+      <div className="min-h-screen">
+        {blogs.map((blog: any, index: number) =>
+          index % 2 === 0 ? (
+            <div key={index} className="mb-20 grid grid-cols-10">
+              <div className="col-start-2 col-span-5">
+                <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
+                  {blog.title}
+                </h1>
+              </div>
+              <div className="col-start-2 col-span-4 m-5 mx-16">
+                <p>
+                  {blog.content
+                    .map((paragraph: any) => paragraph.description)
+                    .slice(0, 350)}
+                  ...
+                </p>
+                <div className="flex justify-end">
+                  <Link href={`/blog/${blog.title}`}>
+                    <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
+                      <span>More...</span>
+                      <style jsx global>
+                        {globalStyles}
+                      </style>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              <div className="h-72 w-128 relative col-start-6 col-span-4">
+                <Image
+                  src={`/${blog.image}`}
+                  alt="blog_image"
+                  fill={true}
+                  style={{ objectFit: "cover" }}
+                ></Image>
               </div>
             </div>
-            <div className="h-72 w-128 relative col-start-6 col-span-4">
-              <Image
-                src={`/${blog.image}`}
-                alt="blog_image"
-                fill={true}
-                style={{ objectFit: "cover" }}
-              ></Image>
-            </div>
-          </div>
-        ) : (
-          <div key={index} className="mb-20 grid grid-cols-10">
-            <div className="col-start-5 col-span-5">
-              <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
-                {blog.title}
-              </h1>
-            </div>
-            <div className="h-72 w-128 relative col-start-2 col-span-4">
-              <Image
-                src={`/${blog.image}`}
-                alt="blog_image"
-                // height={288}
-                // width={400}
-                fill={true}
-                style={{ objectFit: "cover" }}
-              ></Image>
-            </div>
-            <div className="col-start-6 col-span-4 m-5 mr-16">
-              <p>
-                {blog.content
-                  .map((paragraph: any) => paragraph.description)
-                  .slice(0, 350)}
-                ...
-              </p>
-              <div className="flex justify-end">
-                <Link href={`/blog/${blog.title}`}>
-                  <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
-                    <span>More...</span>
-                    <style jsx global>
-                      {globalStyles}
-                    </style>
-                  </button>
-                </Link>
+          ) : (
+            <div key={index} className="mb-20 grid grid-cols-10">
+              <div className="col-start-5 col-span-5">
+                <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
+                  {blog.title}
+                </h1>
+              </div>
+              <div className="h-72 w-128 relative col-start-2 col-span-4">
+                <Image
+                  src={`/${blog.image}`}
+                  alt="blog_image"
+                  // height={288}
+                  // width={400}
+                  fill={true}
+                  style={{ objectFit: "cover" }}
+                ></Image>
+              </div>
+              <div className="col-start-6 col-span-4 m-5 mr-16">
+                <p>
+                  {blog.content
+                    .map((paragraph: any) => paragraph.description)
+                    .slice(0, 350)}
+                  ...
+                </p>
+                <div className="flex justify-end">
+                  <Link href={`/blog/${blog.title}`}>
+                    <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
+                      <span>More...</span>
+                      <style jsx global>
+                        {globalStyles}
+                      </style>
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        )
-      )}
+          )
+        )}{" "}
+      </div>
+      <div className="absolute h-[40rem] w-[40rem] -right-0 bottom-0 -z-[10] overflow-hidden">
+        <div className="bg-pink rounded-full w-full h-full absolute -right-36 -bottom-3"></div>
+      </div>
       <Footer></Footer>
     </div>
   );
