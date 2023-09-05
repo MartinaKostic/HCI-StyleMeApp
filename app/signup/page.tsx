@@ -1,91 +1,94 @@
 "use client";
-
 import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import globalStyles from "@/utils/global";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+interface FormData {
+  name: string;
+  email: string;
+  password: string;
+}
 
 export default function SignUp() {
-  const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log("Form data submitted:", data);
     // Add your sign-up logic here, such as making an API request
-    console.log("Form data submitted:", formData);
   };
 
   return (
-    <div className="">
+    <div>
       <Header></Header>
-      <div className="min-h-screen p-8 w-96">
-        <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="name" className="block  font-medium mb-2">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:border-blue-500"
-              required
-            />
+      <div className="absolute bg-pink rounded-full h-[20rem] w-[20rem] -top-24 -left-12"></div>
+      <div className="min-h-screen flex justify-center items-center">
+        <div className="p-8 w-[96]">
+          <div className="col-start-2 col-span-2 flex justify-center">
+            <h1 className="bg-hotpink text-center text-2xl py-1 w-[36rem]">
+              Sign Up
+            </h1>
           </div>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-gray-700 font-medium mb-2"
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="mb-4">
+              <label htmlFor="name" className="block  font-medium mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                {...register("name", { required: true })}
+                className="border w-full py-2 px-3 leading-tight focus:outline-none  focus:border-hotpink"
+              />
+              {errors.name && <p className="text-red-500">Name is required.</p>}
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block font-medium mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                {...register("email", {
+                  required: true,
+                })}
+                className="border w-full py-2 px-3 leading-tight focus:outline-none  focus:border-hotpink"
+              />
+              {errors.email && (
+                <p className="text-red-500">Email is required.</p>
+              )}
+            </div>
+            <div className="mb-4">
+              <label htmlFor="password" className="block0 font-medium mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                {...register("password", { required: true })}
+                className="border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-hotpink"
+              />
+              {errors.password && (
+                <p className="text-red-500">Password is required.</p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="border border-text_color h-10 w-[250px] relative hover-button text-lg"
             >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:border-blue-500"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="password"
-              className="block text-gray-700 font-medium mb-2"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:border-blue-500"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
-          >
-            Sign Up
-          </button>
-        </form>
+              <span>Sign Up</span>
+              <style jsx global>
+                {globalStyles}
+              </style>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div className="absolute h-[40rem] w-[40rem] -right-0 bottom-0 -z-[10] overflow-hidden">
+        <div className="bg-pink rounded-full w-full h-full absolute -right-36 -bottom-3"></div>
       </div>
       <Footer></Footer>
     </div>
