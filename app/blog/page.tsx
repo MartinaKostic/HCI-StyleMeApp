@@ -10,11 +10,9 @@ import globalStyles from "@/utils/global";
 import axios from "axios";
 import React from "react";
 
-//  <Link href={`/blog/${post.slug}`} key={post.id}>
-
 export default function Blog() {
   const [blogs, setBlogs] = React.useState([]);
-  console.log(blogs);
+
   //dohvati sva pitanja
   React.useEffect(() => {
     refetchBlogs();
@@ -83,7 +81,12 @@ export default function Blog() {
               </h1>
             </div>
             <div className="col-start-2 col-span-4 m-5 mx-16">
-              <p>{blog.content.slice(0, 350)}...</p>
+              <p>
+                {blog.content
+                  .map((paragraph: any) => paragraph.description)
+                  .slice(0, 350)}
+                ...
+              </p>
               <div className="flex justify-end">
                 <Link href={`/blog/${blog.title}`}>
                   <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
@@ -111,7 +114,7 @@ export default function Blog() {
                 {blog.title}
               </h1>
             </div>
-            <div className="ml-24 h-72 w-128 relative col-start-2 col-span-4">
+            <div className="h-72 w-128 relative col-start-2 col-span-4">
               <Image
                 src={`/${blog.image}`}
                 alt="blog_image"
@@ -122,16 +125,21 @@ export default function Blog() {
               ></Image>
             </div>
             <div className="col-start-6 col-span-4 m-5 mr-16">
-              <p>{blog.content.slice(0, 350)}...</p>
+              <p>
+                {blog.content
+                  .map((paragraph: any) => paragraph.description)
+                  .slice(0, 350)}
+                ...
+              </p>
               <div className="flex justify-end">
-                <a href="/blog">
+                <Link href={`/blog/${blog.title}`}>
                   <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
                     <span>More...</span>
                     <style jsx global>
                       {globalStyles}
                     </style>
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

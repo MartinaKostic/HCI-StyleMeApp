@@ -9,7 +9,7 @@ const Footer = () => {
     <>
       <footer className="bg-pink p-7 text-center bottom-0 w-full">
         <div className="flex justify-between h-full text-2xl">
-          <div className=""> styleme</div>
+          <div className="basis-60 flex justify-start"> styleme</div>
           <div className="flex flex-col items-center">
             <div className="mb-3">Follow us:</div>
             <div className="flex flex-row mt-3">
@@ -24,13 +24,14 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="basis-60">
             Contact us:
-            <div className="text-base">
-              <div>styleme@gmail.com</div>
-              <div>+385971885992</div>
-              <div>Ul. Ruđera Boškovića 32, 21000, Split</div>
-            </div>
+            <ul className="text-base">
+              <li>styleme@gmail.com</li>
+              <li>+385971885992</li>
+              <li>Ul. Ruđera Boškovića 32</li>
+              <li> 21000 Split</li>
+            </ul>
           </div>
         </div>
       </footer>

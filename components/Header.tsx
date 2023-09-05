@@ -28,7 +28,7 @@ const Header = () => {
           </li>
           <li className={`mx-3 ${pathname === "/blog" ? "active" : ""}`}>
             <Link href="/blog">
-              <p className="nav-link">blog</p>
+              <p className="nav-link">blogs</p>
             </Link>
           </li>
           <li className={`mx-3 ${pathname === "/signup" ? "active" : ""}`}>

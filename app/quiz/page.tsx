@@ -116,18 +116,29 @@ export default function Quiz() {
           ))}
         </div>
       )}
-      {!allQuestionsAnswered && (
-        <button
-          onClick={handleNextQuestion}
-          disabled={!isCurrentQuestionAnswered}
-        >
-          Next
-        </button>
-      )}
-      {allQuestionsAnswered && (
-        <button onClick={calculateResult}>Calculate Result</button>
-      )}
 
+      <div className="flex items-center">
+        {!allQuestionsAnswered && (
+          <div className="w-5/6 flex justify-end mt-4 my-20">
+            <button
+              onClick={handleNextQuestion}
+              disabled={!isCurrentQuestionAnswered}
+              className="border border-text_color h-10 w-[250px] relative hover-button text-lg disabled:border-gray-500 disabled:text-gray-500 disabled:cursor-not-allowed disabled:opacity-70 disabled:shadow-none disabled:pointer-events-none"
+            >
+              Next
+            </button>
+          </div>
+        )}
+        {allQuestionsAnswered && (
+          <button
+            onClick={calculateResult}
+            disabled={!isCurrentQuestionAnswered}
+            className="border border-text_color h-10 w-[250px] relative hover-button text-lg  disabled:border-gray-500 disabled:text-gray-500 disabled:cursor-not-allowed disabled:opacity-70 disabled:shadow-none disabled:pointer-events-none "
+          >
+            Calculate Result
+          </button>
+        )}
+      </div>
       <Footer></Footer>
     </div>
   );

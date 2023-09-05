@@ -7,14 +7,16 @@
   ],
   "blogs": [
     {
+      "id": "A",
       "title": "A",
+      "intro": "Blabascnkscnkascnsic ascjasdpojdpo jsd pojsdo pjdojsdposdpcjdp sdpjo j0 jwpojwj",
       "content": [
         {
-          "point": "1. Use the bandana as a hair tie",
+          "point": "Use the bandana as a hair tie",
           "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
         },
         {
-          "point": "2. Bandana as a headband",
+          "point": "Bandana as a headband",
           "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
         }
       ],
@@ -22,14 +24,16 @@
       "image": "kat.jpg"
     },
     {
+      "id": "B",
       "title": "B",
+      "intro": "Blabascnkscnkascnsic ascjasdpojdpo jsd pojsdo pjdojsdposdpcjdp sdpjo j0 jwpojw",
       "content": [
         {
-          "point": "1. Use the bandana as a hair tie",
+          "point": "Use the bandana as a hair tie",
           "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
         },
         {
-          "point": "2. Bandana as a headband",
+          "point": " Bandana as a headband",
           "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
         }
       ],
@@ -37,14 +41,16 @@
       "image": "kat.jpg"
     },
     {
+      "id": "C",
       "title": "C",
+      "intro": "Mamamamam attatattatat",
       "content": [
         {
-          "point": "1. Use the bandana as a hair tie",
+          "point": "Use the bandana as a hair tie",
           "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
         },
         {
-          "point": "2. Bandana as a headband",
+          "point": "Bandana as a headband",
           "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
         }
       ],
@@ -52,14 +58,16 @@
       "image": "kat.jpg"
     },
     {
+      "id": "D",
       "title": "D",
+      "intro": "Mamamamam attatattatat",
       "content": [
         {
-          "point": "1. Use the bandana as a hair tie",
+          "point": "Use the bandana as a hair tie",
           "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
         },
         {
-          "point": "2. Bandana as a headband",
+          "point": "Bandana as a headband",
           "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
         }
       ],
@@ -67,14 +75,16 @@
       "image": "kat.jpg"
     },
     {
-      "title": "A",
+      "id": "E",
+      "title": "E",
+      "intro": "Mamamamam attatattatat",
       "content": [
         {
-          "point": "1. Use the bandana as a hair tie",
+          "point": "Use the bandana as a hair tie",
           "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
         },
         {
-          "point": "2. Bandana as a headband",
+          "point": "Bandana as a headband",
           "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
         }
       ],
