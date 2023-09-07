@@ -1,6 +1,17 @@
 {
   "users": [
-    { "email": "i@gmail.com", "username": "ivana", "password": "Dd123!" }
+    {
+      "id": 1,
+      "email": "i@gmail.com",
+      "username": "ivana",
+      "password": "Dd123!"
+    },
+    {
+      "username": "asdd masmdas",
+      "email": "martinakostic14@gmail.com",
+      "password": "sdfsdvdsvrfd",
+      "id": 2
+    }
   ],
   "blogs": [
     {
@@ -234,7 +245,11 @@
         }
       ],
       "date": "2023-07-01",
-      "tags": ["Next.js", "React", "Web Development"]
+      "tags": [
+        "Next.js",
+        "React",
+        "Web Development"
+      ]
     },
     {
       "id": "Spice up your back to scool wardrobe",
@@ -338,7 +353,6 @@
       "date": "2023-07-01"
     }
   ],
-
   "styleinspo": [
     {
       "id": 1,
@@ -359,31 +373,76 @@
     {
       "questionText": "How tall do you appear?",
       "answers": [
-        { "answerText": "I look taller than I am", "id": 1 },
-        { "answerText": "I look slightly taller", "id": 2 },
-        { "answerText": "I look my hight", "id": 3 },
-        { "answerText": "I look slightly shorter", "id": 4 },
-        { "answerText": "I look very small", "id": 5 }
+        {
+          "answerText": "I look taller than I am",
+          "id": 1
+        },
+        {
+          "answerText": "I look slightly taller",
+          "id": 2
+        },
+        {
+          "answerText": "I look my hight",
+          "id": 3
+        },
+        {
+          "answerText": "I look slightly shorter",
+          "id": 4
+        },
+        {
+          "answerText": "I look very small",
+          "id": 5
+        }
       ]
     },
     {
       "questionText": "What is the shape of you shoulders?",
       "answers": [
-        { "answerText": "Sharp and Narrow", "id": 1 },
-        { "answerText": "Broad and Blunt", "id": 2 },
-        { "answerText": "Symetrical and Even", "id": 3 },
-        { "answerText": "Sloaped and Tappered", "id": 4 },
-        { "answerText": "Sloaped and Rounded", "id": 5 }
+        {
+          "answerText": "Sharp and Narrow",
+          "id": 1
+        },
+        {
+          "answerText": "Broad and Blunt",
+          "id": 2
+        },
+        {
+          "answerText": "Symetrical and Even",
+          "id": 3
+        },
+        {
+          "answerText": "Sloaped and Tappered",
+          "id": 4
+        },
+        {
+          "answerText": "Sloaped and Rounded",
+          "id": 5
+        }
       ]
     },
     {
       "questionText": "What is the shape of you arms and legs, and how long are they?",
       "answers": [
-        { "answerText": "Narrow and Elongated", "id": 1 },
-        { "answerText": "Broad and Elongated", "id": 2 },
-        { "answerText": "Moderate", "id": 3 },
-        { "answerText": "Short in proportion to your hight", "id": 4 },
-        { "answerText": "Very short in proportion to your hight", "id": 5 }
+        {
+          "answerText": "Narrow and Elongated",
+          "id": 1
+        },
+        {
+          "answerText": "Broad and Elongated",
+          "id": 2
+        },
+        {
+          "answerText": "Moderate",
+          "id": 3
+        },
+        {
+          "answerText": "Short in proportion to your hight",
+          "id": 4
+        },
+        {
+          "answerText": "Very short in proportion to your hight",
+          "id": 5
+        }
       ]
     },
     {
@@ -393,30 +452,72 @@
           "answerText": "Long and Straight, even when gaining weight",
           "id": 1
         },
-        { "answerText": "Broad with muscular tendencies", "id": 2 },
-        { "answerText": "Moderate and Symmetrical", "id": 3 },
-        { "answerText": "Soft Hourglass", "id": 4 },
-        { "answerText": "Very Defined Hourglass", "id": 5 }
+        {
+          "answerText": "Broad with muscular tendencies",
+          "id": 2
+        },
+        {
+          "answerText": "Moderate and Symmetrical",
+          "id": 3
+        },
+        {
+          "answerText": "Soft Hourglass",
+          "id": 4
+        },
+        {
+          "answerText": "Very Defined Hourglass",
+          "id": 5
+        }
       ]
     },
     {
       "questionText": "What is the shape of your jawline?",
       "answers": [
-        { "answerText": "Sharp and Defined", "id": 1 },
-        { "answerText": "Blunt and Wide", "id": 2 },
-        { "answerText": "Neither Sharp or Round", "id": 3 },
-        { "answerText": "Narrow and Delicate", "id": 4 },
-        { "answerText": "Rounded and Broad", "id": 5 }
+        {
+          "answerText": "Sharp and Defined",
+          "id": 1
+        },
+        {
+          "answerText": "Blunt and Wide",
+          "id": 2
+        },
+        {
+          "answerText": "Neither Sharp or Round",
+          "id": 3
+        },
+        {
+          "answerText": "Narrow and Delicate",
+          "id": 4
+        },
+        {
+          "answerText": "Rounded and Broad",
+          "id": 5
+        }
       ]
     },
     {
       "questionText": "What is the shape of your cheekbones?",
       "answers": [
-        { "answerText": "High and Noticeable", "id": 1 },
-        { "answerText": "Wide and Blunt", "id": 2 },
-        { "answerText": "Moderate", "id": 3 },
-        { "answerText": "Slightly Rounded and Delicate", "id": 4 },
-        { "answerText": "Rounded and Full", "id": 5 }
+        {
+          "answerText": "High and Noticeable",
+          "id": 1
+        },
+        {
+          "answerText": "Wide and Blunt",
+          "id": 2
+        },
+        {
+          "answerText": "Moderate",
+          "id": 3
+        },
+        {
+          "answerText": "Slightly Rounded and Delicate",
+          "id": 4
+        },
+        {
+          "answerText": "Rounded and Full",
+          "id": 5
+        }
       ]
     }
   ]

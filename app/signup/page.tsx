@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 
 interface FormData {
+  id: string;
   username: string;
   email: string;
   password: string;
@@ -29,6 +30,7 @@ export default function SignUp() {
   };
 
   const handleSignUp = (data: FormData) => {
+    console.log(data);
     axios
       .post("http://localhost:3003/users", data)
       .then((response) => {
@@ -42,6 +44,7 @@ export default function SignUp() {
       })
       .catch((error) => {
         // Handle server error
+        console.log(error);
         setErrorMessage("An error occurred while signing up.");
       });
   };
