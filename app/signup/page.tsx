@@ -35,7 +35,7 @@ export default function SignUp() {
       .post("http://localhost:3003/users", data)
       .then((response) => {
         // Handle successful sign-up
-        if (response.data.success) {
+        if (response.data) {
           router.push("/signin");
         } else {
           // Handle sign-up error (e.g., email already taken)

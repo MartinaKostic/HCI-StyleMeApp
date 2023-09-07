@@ -5,12 +5,6 @@
       "email": "i@gmail.com",
       "username": "ivana",
       "password": "Dd123!"
-    },
-    {
-      "username": "asdd masmdas",
-      "email": "martinakostic14@gmail.com",
-      "password": "sdfsdvdsvrfd",
-      "id": 2
     }
   ],
   "blogs": [
@@ -245,11 +239,7 @@
         }
       ],
       "date": "2023-07-01",
-      "tags": [
-        "Next.js",
-        "React",
-        "Web Development"
-      ]
+      "tags": ["Next.js", "React", "Web Development"]
     },
     {
       "id": "Spice up your back to scool wardrobe",

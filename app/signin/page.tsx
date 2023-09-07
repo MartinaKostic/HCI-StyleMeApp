@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 
 interface UserData {
   [x: string]: any;
+  id: string;
   name: string;
   email: string;
   password: string;
@@ -32,6 +33,7 @@ export default function SignIn() {
   }
 
   const handleSignin = () => {
+    console.log(users);
     const user = users?.find(
       (user: { username: string; password: string }) =>
         user.username === username && user.password === password
@@ -83,7 +85,7 @@ export default function SignIn() {
             </div>
             <div className="flex justify-end">
               <button
-                onClick={() => handleSignin}
+                onClick={() => handleSignin()}
                 className="border border-text_color h-10 w-[250px] relative hover-button text-lg"
               >
                 <span>Sign In</span>
