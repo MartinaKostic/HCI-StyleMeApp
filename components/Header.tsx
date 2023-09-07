@@ -3,7 +3,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
-  //hover i active klase
   const pathname = usePathname();
 
   return (
@@ -34,6 +33,11 @@ const Header = () => {
           <li className={`mx-3 ${pathname === "/signup" ? "active" : ""}`}>
             <Link href="/signup">
               <p className="nav-link">sign up</p>
+            </Link>
+          </li>
+          <li className={`mx-3 ${pathname === "/signin" ? "active" : ""}`}>
+            <Link href="/signin">
+              <p className="nav-link">sign in</p>
             </Link>
           </li>
           <li className={`mx-3 ${pathname === "/contactus" ? "active" : ""}`}>

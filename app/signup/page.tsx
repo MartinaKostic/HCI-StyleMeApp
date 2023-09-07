@@ -4,6 +4,8 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import globalStyles from "@/utils/global";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 
 interface FormData {
   name: string;
@@ -18,9 +20,34 @@ export default function SignUp() {
     formState: { errors },
   } = useForm<FormData>();
 
+  const [errorMessage, setErrorMessage] = React.useState("");
+  const router = useRouter();
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log("Form data submitted:", data);
-    // Add your sign-up logic here, such as making an API request
+
+    handleSignUp(data);
+  };
+  const handleSignUp = (data: FormData) => {
+    // Validation logic (e.g., checking for valid email format and password requirements)
+
+    // Send user data to the server
+    axios
+      .post("http://localhost:3003/users", {
+        data,
+      })
+      .then((response) => {
+        // Handle successful sign-up
+        if (response.data.success) {
+          router.push("/signin");
+        } else {
+          // Handle sign-up error (e.g., email already taken)
+          setErrorMessage(response.data.message);
+        }
+      })
+      .catch((error) => {
+        // Handle server error
+        setErrorMessage("An error occurred while signing up.");
+      });
   };
 
   return (
@@ -35,23 +62,25 @@ export default function SignUp() {
             </h1>
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-4">
-              <label htmlFor="name" className="block  font-medium mb-2">
-                Name
-              </label>
+            <div className="my-10">
+              {/* <label htmlFor="name" className="block  font-medium mb-2">
+                Userame
+              </label> */}
               <input
                 type="text"
+                placeholder="Username"
                 {...register("name", { required: true })}
                 className="border w-full py-2 px-3 leading-tight focus:outline-none  focus:border-hotpink"
               />
               {errors.name && <p className="text-red-500">Name is required.</p>}
             </div>
-            <div className="mb-4">
-              <label htmlFor="email" className="block font-medium mb-2">
+            <div className="my-10">
+              {/* <label htmlFor="email" className="block font-medium mb-2">
                 Email
-              </label>
+              </label> */}
               <input
                 type="email"
+                placeholder="Email"
                 {...register("email", {
                   required: true,
                 })}
@@ -61,12 +90,13 @@ export default function SignUp() {
                 <p className="text-red-500">Email is required.</p>
               )}
             </div>
-            <div className="mb-4">
-              <label htmlFor="password" className="block0 font-medium mb-2">
+            <div className="my-10">
+              {/* <label htmlFor="password" className="block0 font-medium mb-2">
                 Password
-              </label>
+              </label> */}
               <input
                 type="password"
+                placeholder="Password"
                 {...register("password", { required: true })}
                 className="border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-hotpink"
               />
@@ -74,16 +104,17 @@ export default function SignUp() {
                 <p className="text-red-500">Password is required.</p>
               )}
             </div>
-
-            <button
-              type="submit"
-              className="border border-text_color h-10 w-[250px] relative hover-button text-lg"
-            >
-              <span>Sign Up</span>
-              <style jsx global>
-                {globalStyles}
-              </style>
-            </button>
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="border border-text_color h-10 w-[250px] relative hover-button text-lg"
+              >
+                <span>Sign Up</span>
+                <style jsx global>
+                  {globalStyles}
+                </style>
+              </button>
+            </div>
           </form>
         </div>
       </div>
