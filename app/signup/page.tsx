@@ -19,35 +19,40 @@ export default function SignUp() {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
-
+  const bcrypt = require("bcrypt");
   const [errorMessage, setErrorMessage] = React.useState("");
   const router = useRouter();
+
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log("Form data submitted:", data);
 
     handleSignUp(data);
   };
-  const handleSignUp = (data: FormData) => {
-    // Validation logic (e.g., checking for valid email format and password requirements)
+  const handleSignUp = async (data: FormData) => {
+    try {
+      // Hash the user's password
+      const saltRounds = 10;
+      const hashedPassword = await bcrypt.hash(data.password, saltRounds);
 
-    // Send user data to the server
-    axios
-      .post("http://localhost:3003/users", {
-        data,
-      })
-      .then((response) => {
-        // Handle successful sign-up
-        if (response.data.success) {
-          router.push("/signin");
-        } else {
-          // Handle sign-up error (e.g., email already taken)
-          setErrorMessage(response.data.message);
-        }
-      })
-      .catch((error) => {
-        // Handle server error
-        setErrorMessage("An error occurred while signing up.");
+      // Send user data with hashed password to the server
+      const response = await axios.post("http://localhost:3003/users", {
+        data: {
+          ...data,
+          password: hashedPassword, // Replace the plaintext password with the hashed password
+        },
       });
+
+      // Handle successful sign-up
+      if (response.data.success) {
+        router.push("/signin");
+      } else {
+        // Handle sign-up error (e.g., email already taken)
+        setErrorMessage(response.data.message);
+      }
+    } catch (error) {
+      // Handle errors, such as hashing failure or network issues
+      setErrorMessage("An error occurred while signing up.");
+    }
   };
 
   return (
