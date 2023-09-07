@@ -1,9 +1,12 @@
 "use client";
+import LoginContext from "@/context/loginContext";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useContext } from "react";
 
 const Header = () => {
   const pathname = usePathname();
+  const loginContext = useContext(LoginContext);
 
   return (
     <div className="absolute w-full h-20 bg-transparent top-0 z-50 ">
@@ -30,16 +33,33 @@ const Header = () => {
               <p className="nav-link">blogs</p>
             </Link>
           </li>
-          <li className={`mx-3 ${pathname === "/signup" ? "active" : ""}`}>
-            <Link href="/signup">
-              <p className="nav-link">sign up</p>
-            </Link>
-          </li>
-          <li className={`mx-3 ${pathname === "/signin" ? "active" : ""}`}>
-            <Link href="/signin">
-              <p className="nav-link">sign in</p>
-            </Link>
-          </li>
+          {loginContext.isLogin ? (
+            <li
+              className="mx-3"
+              onClick={() => {
+                localStorage.removeItem("authenticatedUser");
+                loginContext.setIsLogin(false);
+              }}
+            >
+              <Link href="/signin">
+                <p className="nav-link">sign out</p>
+              </Link>
+            </li>
+          ) : (
+            <>
+              <li className={`mx-3 ${pathname === "/signup" ? "active" : ""}`}>
+                <Link href="/signup">
+                  <p className="nav-link">sign up</p>
+                </Link>
+              </li>
+              <li className={`mx-3 ${pathname === "/signin" ? "active" : ""}`}>
+                <Link href="/signin">
+                  <p className="nav-link">sign in</p>
+                </Link>
+              </li>
+            </>
+          )}
+
           <li className={`mx-3 ${pathname === "/contactus" ? "active" : ""}`}>
             <Link href="/contactus">
               <p className="nav-link">contact us</p>
