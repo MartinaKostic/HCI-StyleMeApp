@@ -5,6 +5,9 @@ import Footer from "../../components/Footer";
 import globalStyles from "@/utils/global";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import LoginContext from "@/context/loginContext";
+import { compare } from "bcryptjs";
 
 interface UserData {
   [x: string]: any;
@@ -20,6 +23,7 @@ export default function SignIn() {
   const [errorMessage, setErrorMessage] = React.useState<string>("");
   const [users, setUsers] = React.useState<UserData>();
   const router = useRouter();
+  const loginContext = useContext(LoginContext);
 
   //dohvati sva pitanja
   React.useEffect(() => {
@@ -32,18 +36,46 @@ export default function SignIn() {
     });
   }
 
-  const handleSignin = () => {
-    console.log(users);
-    const user = users?.find(
-      (user: { username: string; password: string }) =>
-        user.username === username && user.password === password
-    );
+  const getUsersDataFromJsonFile = async () => {
+    try {
+      const response = await axios.get("http://localhost:3003/users");
+      if (response.data) {
+        return response.data;
+      } else {
+        throw new Error("Error fetching user data from JSON file");
+      }
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  };
 
-    if (user) {
-      localStorage.setItem("authenticatedUser", JSON.stringify(user.username));
-      router.push("/quiz");
-    } else {
-      setErrorMessage("Invalid username or password");
+  const handleSignin = async () => {
+    try {
+      const usersDataFromJsonFile = await getUsersDataFromJsonFile();
+      const user = usersDataFromJsonFile.find(
+        (u: any) => u.username === username
+      );
+
+      if (user) {
+        const passwordMatch = await compare(password, user.password);
+
+        if (passwordMatch) {
+          localStorage.setItem(
+            "authenticatedUser",
+            JSON.stringify(user.username)
+          );
+          loginContext.setIsLogin(true);
+          router.push("/quiz");
+        } else {
+          setErrorMessage("Invalid username or password");
+        }
+      } else {
+        setErrorMessage("User not found in JSON file");
+      }
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("An error occurred while signing in.");
     }
   };
 
@@ -85,7 +117,10 @@ export default function SignIn() {
             </div>
             <div className="flex justify-end">
               <button
-                onClick={() => handleSignin()}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSignin();
+                }}
                 className="border border-text_color h-10 w-[250px] relative hover-button text-lg"
               >
                 <span>Sign In</span>
