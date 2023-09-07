@@ -6,6 +6,7 @@ import globalStyles from "@/utils/global";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import { hash } from "bcryptjs";
 
 interface FormData {
   id: string;
@@ -29,24 +30,33 @@ export default function SignUp() {
     handleSignUp(data);
   };
 
-  const handleSignUp = (data: FormData) => {
-    console.log(data);
-    axios
-      .post("http://localhost:3003/users", data)
-      .then((response) => {
-        // Handle successful sign-up
-        if (response.data) {
-          router.push("/signin");
-        } else {
-          // Handle sign-up error (e.g., email already taken)
-          setErrorMessage(response.data.message);
-        }
-      })
-      .catch((error) => {
-        // Handle server error
-        console.log(error);
-        setErrorMessage("An error occurred while signing up.");
-      });
+  const handleSignUp = async (data: FormData) => {
+    try {
+      const hashedPassword = await hash(data.password, 10);
+
+      const userData = {
+        username: data.username,
+        email: data.email,
+        password: hashedPassword,
+      };
+
+      axios
+        .post("http://localhost:3003/users", userData)
+        .then((response) => {
+          if (response.data) {
+            router.push("/signin");
+          } else {
+            setErrorMessage(response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          setErrorMessage("An error occurred while signing up.");
+        });
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("An error occurred while hashing the password.");
+    }
   };
 
   return (
