@@ -119,7 +119,7 @@ export default function Quiz() {
         </div>
       </div>
 
-      {quiz[currentQuestion] && (
+      {!exactStyleInspo && quiz[currentQuestion] && (
         <div
           key={currentQuestion}
           className="my-10 flex flex-col items-center "

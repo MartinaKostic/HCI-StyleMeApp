@@ -75,7 +75,10 @@ export default function Blog() {
       <div className="min-h-screen">
         {blogs.map((blog: any, index: number) =>
           index % 2 === 0 ? (
-            <div key={index} className="mb-20 grid grid-cols-10">
+            <div
+              key={index}
+              className="mb-20 grid lg:grid-cols-10 sm:grid-rows-10"
+            >
               <div className="col-start-2 col-span-5">
                 <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
                   {blog.title}
@@ -110,7 +113,10 @@ export default function Blog() {
               </div>
             </div>
           ) : (
-            <div key={index} className="mb-20 grid grid-cols-10">
+            <div
+              key={index}
+              className="mb-20 grid lg:grid-cols-10 sm:grid-rows-10"
+            >
               <div className="col-start-5 col-span-5">
                 <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
                   {blog.title}

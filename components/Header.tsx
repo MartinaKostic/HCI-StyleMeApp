@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <div className="absolute w-full h-20 bg-transparent top-0 z-50 ">
-      <div className="flex justify-between px-4 h-full w-full items-center text-2xl">
+      <div className=" sm:hidden lg:flex justify-between px-4 h-full w-full items-center text-2xl">
         <p>styleme</p>
         <ul className="flex gap-x-6 text-lg">
           <li className={`mx-3 ${pathname === "/" ? "active" : ""}`}>

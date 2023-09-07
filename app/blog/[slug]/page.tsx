@@ -52,15 +52,16 @@ export default async function BlogPost({ params }: Params) {
             {blog.content.map((content: ContentProps) => (
               <li key={content.id} className="mb-4 ">
                 <p className="text-xl font-semibold">{content.point}</p>
-                <p className="text-base font-normal">{content.description}</p>
-                {/* You can also include images within each point */}
-                <div className="h-72 w-128 relative ">
-                  <Image
-                    src={`/${content.image}`}
-                    alt="Point Image"
-                    fill={true}
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="lg:grid lg:grid-cols-2">
+                  <p className="text-base font-normal">{content.description}</p>
+                  <div className="h-72 w-128 relative ">
+                    <Image
+                      src={`/${content.image}`}
+                      alt="Point Image"
+                      fill={true}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
                 </div>
               </li>
             ))}

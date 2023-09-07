@@ -18,11 +18,11 @@ export default function Home() {
 
   return (
     <div>
-      <Header></Header>
-      <div className="grid grid-cols-3 h-128 text-center">
-        <div className="grid grid-row content-center bg-green bg-opacity-30 z-10">
+      <Header ></Header>
+      <div className="grid lg:grid-cols-3 h-128 sm:grid-row-3 text-center">
+        <div className="grid grid-row content-center bg-green bg-opacity-30 z-10 w-full">
           <div className="flex justify-center">
-            <Image src={quiz} alt="quiz" className="h-52 w-auto " />
+            <Image src={quiz} alt="quiz" className="h-52 w-auto" />
           </div>
           <h1 className="text-3xl ">Take a quiz</h1>
           <div className="flex justify-center">
@@ -64,7 +64,7 @@ export default function Home() {
           <h1 className="text-3xl ">Blog</h1>
           <div className="flex justify-center">
             <button
-              className="border border-text_color m-10 h-10 w-[250px] sm:w-[10px] relative hover-button"
+              className="border border-text_color m-10 h-10 w-[250px] relative hover-button"
               onClick={() => router.push("/blog")}
             >
               <span>Go to the section</span>

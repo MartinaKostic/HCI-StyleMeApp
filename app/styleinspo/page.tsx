@@ -7,8 +7,10 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { BsSearch } from "react-icons/bs";
 import globalStyles from "@/utils/global";
+import React from "react";
 //CENTRIRAN NASLOV!
 export default function StyleInspo() {
+  const [search, setSearch] = React.useState("");
   return (
     <div>
       <Header></Header>
@@ -39,6 +41,8 @@ export default function StyleInspo() {
                     name="search"
                     className="py-2 pl-1 w-full bg-transparent text-basis text-text_color placeholder-text_color placeholder-opacity-100 focus:outline-none"
                     placeholder="Find what you're looking for..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
                   />
                 </div>
               </div>

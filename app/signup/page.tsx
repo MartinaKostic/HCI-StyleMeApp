@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 
 interface FormData {
-  name: string;
+  username: string;
   email: string;
   password: string;
 }
@@ -19,40 +19,31 @@ export default function SignUp() {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
-  const bcrypt = require("bcrypt");
+
   const [errorMessage, setErrorMessage] = React.useState("");
   const router = useRouter();
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log("Form data submitted:", data);
-
     handleSignUp(data);
   };
-  const handleSignUp = async (data: FormData) => {
-    try {
-      // Hash the user's password
-      const saltRounds = 10;
-      const hashedPassword = await bcrypt.hash(data.password, saltRounds);
 
-      // Send user data with hashed password to the server
-      const response = await axios.post("http://localhost:3003/users", {
-        data: {
-          ...data,
-          password: hashedPassword, // Replace the plaintext password with the hashed password
-        },
+  const handleSignUp = (data: FormData) => {
+    axios
+      .post("http://localhost:3003/users", data)
+      .then((response) => {
+        // Handle successful sign-up
+        if (response.data.success) {
+          router.push("/signin");
+        } else {
+          // Handle sign-up error (e.g., email already taken)
+          setErrorMessage(response.data.message);
+        }
+      })
+      .catch((error) => {
+        // Handle server error
+        setErrorMessage("An error occurred while signing up.");
       });
-
-      // Handle successful sign-up
-      if (response.data.success) {
-        router.push("/signin");
-      } else {
-        // Handle sign-up error (e.g., email already taken)
-        setErrorMessage(response.data.message);
-      }
-    } catch (error) {
-      // Handle errors, such as hashing failure or network issues
-      setErrorMessage("An error occurred while signing up.");
-    }
   };
 
   return (
@@ -74,10 +65,12 @@ export default function SignUp() {
               <input
                 type="text"
                 placeholder="Username"
-                {...register("name", { required: true })}
+                {...register("username", { required: true })}
                 className="border w-full py-2 px-3 leading-tight focus:outline-none  focus:border-hotpink"
               />
-              {errors.name && <p className="text-red-500">Name is required.</p>}
+              {errors.username && (
+                <p className="text-red-500">Username is required.</p>
+              )}
             </div>
             <div className="my-10">
               {/* <label htmlFor="email" className="block font-medium mb-2">
@@ -119,6 +112,10 @@ export default function SignUp() {
                   {globalStyles}
                 </style>
               </button>
+            </div>
+            <div className="flex justify-end">
+              {" "}
+              {errorMessage && <p className="text-red-500">{errorMessage}</p>}
             </div>
           </form>
         </div>
