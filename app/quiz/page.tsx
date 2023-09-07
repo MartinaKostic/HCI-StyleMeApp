@@ -6,10 +6,13 @@ import Footer from "../../components/Footer";
 import axios from "axios";
 import React from "react";
 import globalStyles from "@/utils/global";
+import StyleInspo, { StyleData } from "./styleinspo";
 
 export default function Quiz() {
   //ubacit jos krugova
   const [quiz, setQuiz] = React.useState<any[]>([]);
+  const [styleInspoData, setStyleInspoData] = React.useState<StyleData[]>([]);
+  const [exactStyleInspo, setExactStyleInspo] = React.useState<StyleData>();
   const [selectedAnswers, setSelectedAnswers] = React.useState<{
     [key: number]: number;
   }>({});
@@ -19,14 +22,30 @@ export default function Quiz() {
   //dohvati sva pitanja
   React.useEffect(() => {
     refetchQuiz();
+    getStyleInspo();
   }, []);
 
   function refetchQuiz() {
-    axios.get("http://localhost:3003/quiz").then((res) => {
-      setQuiz(res.data);
-    });
+    axios
+      .get("http://localhost:3003/quiz")
+      .then((res) => {
+        setQuiz(res.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching quiz data: ", error);
+      });
   }
 
+  function getStyleInspo() {
+    axios
+      .get("http://localhost:3003/styleinspo")
+      .then((res) => {
+        setStyleInspoData(res.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching styleinspo data: ", error);
+      });
+  }
   const handleAnswerSelect = (questionIndex: number, answerId: number) => {
     setSelectedAnswers((prevSelectedAnswers) => ({
       ...prevSelectedAnswers,
@@ -58,10 +77,18 @@ export default function Quiz() {
 
     // nadi onaj koji je najvise odgovaran
     //parseint zato sta .keys vraca niz stringova
-    const mostSelectedAnswerId = Object.keys(answerCount).reduce((a, b) =>
+    const mostSelectedAnswerId = +Object.keys(answerCount).reduce((a, b) =>
       answerCount[parseInt(a)] > answerCount[parseInt(b)] ? a : b
     );
-    console.log(mostSelectedAnswerId);
+
+    if (styleInspoData) {
+      const styleInspo: StyleData | undefined = styleInspoData.find(
+        (inspo) => inspo.id === mostSelectedAnswerId
+      );
+      setExactStyleInspo(styleInspo);
+      console.log(styleInspo);
+    }
+
     return mostSelectedAnswerId;
   };
 
@@ -132,7 +159,7 @@ export default function Quiz() {
         {allQuestionsAnswered && (
           <div className="w-5/6 flex justify-end mt-4 my-20">
             <button
-              onClick={calculateResult}
+              onClick={() => calculateResult()}
               disabled={!isCurrentQuestionAnswered}
               className="border border-text_color h-10 w-[250px] relative hover-button text-lg  disabled:border-gray-500 disabled:text-gray-500 disabled:cursor-not-allowed disabled:opacity-70 disabled:shadow-none disabled:pointer-events-none "
             >
@@ -141,6 +168,9 @@ export default function Quiz() {
           </div>
         )}
       </div>
+
+      {exactStyleInspo && <StyleInspo styleInspo={exactStyleInspo} />}
+
       <div className="absolute h-[40rem] w-[40rem] -right-0 bottom-0 -z-[10] overflow-hidden">
         <div className="bg-pink rounded-full w-full h-full absolute -right-36 -bottom-3"></div>
       </div>
