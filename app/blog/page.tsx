@@ -2,7 +2,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import blog from "../../public/02.png";
+import blog from "public/02.png";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { BsSearch } from "react-icons/bs";
@@ -85,7 +85,8 @@ export default function Blog() {
                 <p>
                   {blog.content
                     .map((paragraph: any) => paragraph.description)
-                    .slice(0, 350)}
+                    .join(" ") // Combine the array into a single string
+                    .slice(0, 300)}
                   ...
                 </p>
                 <div className="flex justify-end">
@@ -119,8 +120,6 @@ export default function Blog() {
                 <Image
                   src={`/${blog.image}`}
                   alt="blog_image"
-                  // height={288}
-                  // width={400}
                   fill={true}
                   style={{ objectFit: "cover" }}
                 ></Image>
@@ -129,7 +128,8 @@ export default function Blog() {
                 <p>
                   {blog.content
                     .map((paragraph: any) => paragraph.description)
-                    .slice(0, 350)}
+                    .join(" ") // Combine the array into a single string
+                    .slice(0, 300)}
                   ...
                 </p>
                 <div className="flex justify-end">

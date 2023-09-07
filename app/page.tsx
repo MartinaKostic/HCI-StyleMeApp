@@ -64,7 +64,7 @@ export default function Home() {
           <h1 className="text-3xl ">Blog</h1>
           <div className="flex justify-center">
             <button
-              className="border border-text_color m-10 h-10 w-[250px] relative hover-button"
+              className="border border-text_color m-10 h-10 w-[250px] sm:w-[10px] relative hover-button"
               onClick={() => router.push("/blog")}
             >
               <span>Go to the section</span>

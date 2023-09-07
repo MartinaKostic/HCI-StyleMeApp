@@ -130,13 +130,15 @@ export default function Quiz() {
           </div>
         )}
         {allQuestionsAnswered && (
-          <button
-            onClick={calculateResult}
-            disabled={!isCurrentQuestionAnswered}
-            className="border border-text_color h-10 w-[250px] relative hover-button text-lg  disabled:border-gray-500 disabled:text-gray-500 disabled:cursor-not-allowed disabled:opacity-70 disabled:shadow-none disabled:pointer-events-none "
-          >
-            Calculate Result
-          </button>
+          <div className="w-5/6 flex justify-end mt-4 my-20">
+            <button
+              onClick={calculateResult}
+              disabled={!isCurrentQuestionAnswered}
+              className="border border-text_color h-10 w-[250px] relative hover-button text-lg  disabled:border-gray-500 disabled:text-gray-500 disabled:cursor-not-allowed disabled:opacity-70 disabled:shadow-none disabled:pointer-events-none "
+            >
+              Calculate Result
+            </button>
+          </div>
         )}
       </div>
       <div className="absolute h-[40rem] w-[40rem] -right-0 bottom-0 -z-[10] overflow-hidden">

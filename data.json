@@ -1,105 +1,356 @@
 {
   "users": [
-    {
-      "username": "ivana",
-      "password": "martina"
-    }
+    { "email": "i@gmail.com", "username": "ivana", "password": "Dd123!" }
   ],
   "blogs": [
     {
-      "id": "A",
-      "title": "A",
-      "intro": "Blabascnkscnkascnsic ascjasdpojdpo jsd pojsdo pjdojsdposdpcjdp sdpjo j0 jwpojwj",
+      "id": "Tennis core trends",
+      "title": "Tennis core trends",
+      "intro": "We know (and love) the tennis skirt, but who knew that tennis players had so many styles and wardrobe options for both on *and* off the court? Whether you play tennis or just love the style, we've rounded up adorable tennis-inspired fits to help you serve looks (...see what we did there?) this summer.",
+      "image": "tennis.jpg",
+      "content": [
+        {
+          "point": "Cute and classic",
+          "description": "Who says you can't be comfy and stylish at the same time? Radiate cozy vibes by pairing a stylish tennis skirt with your fave oversized shirt. Thanks for the chill-day outfit inspo, Piper.",
+          "image": "skirt.jpg"
+        },
+        {
+          "point": "Sweet sweater",
+          "description": "Cultivate Lilia's angel energy by pairing a tennis skirt with cozy knitwear that is *perfect* for this summer's Y2K trend revival.",
+          "image": "sweater.jpg"
+        },
+        {
+          "point": "Dress it up...",
+          "description": "We can only hope that wearing an outfit inspired by the iconic Sofia Wylie will help us gain some of her confidence and dance skills. Want to recreate the look? Pair an *adorable* tennis skirt with a corset-style top.",
+          "image": "corset.jpg"
+        },
+        {
+          "point": "Hat-tastic",
+          "description": "Bucket hats and visors aren't *just* good at keeping the sun off your face, they make great statement pieces, too. Spice up your daily athleisure look with a sporty hat to take your outfit to the next level.",
+          "image": "hat.jpg"
+        }
+      ],
+      "date": "2023-07-01"
+    },
+    {
+      "id": "Colorful closet guide",
+      "title": "Colorful closet guide",
+      "intro": "This spring, and going into summer, is all about embracing maximalist fashion: lots of colors, patterns and statement pieces.",
+      "image": "colorful.jpg",
+      "content": [
+        {
+          "point": "Bright Colored Button-Down",
+          "description": "It is time to add a bright-colored button-down into the mix. From a bold pattern to a bright spring color, this shirt will get a lot of use for throwing over capsule closet essentials like neutral tanks and trousers. Wear it as a light layer, as you would a blazer.",
+          "image": "bottun.jpg"
+        },
+        {
+          "point": "Bold Pattern Pants",
+          "description": "A spring and summer classic maximalist look is the bold flowy pants look. These pants are perfect for summer vacation, your favorite travel outfits and even wearing them to work.",
+          "image": "pants.jpg"
+        },
+        {
+          "point": "Bold Pattern Satin Midi Dress",
+          "description": "Satin midi dresses have gone viral from bold spring colors to psychedelic patterns with many bright colors. The biggest trend is the satin midi dress with a cowl neck, but it is also emerging in corset and straight fits.",
+          "image": "bolddress.jpg"
+        },
+        {
+          "point": "Color Pop Blazer Or Suit",
+          "description": "Say hello to the spring statement must-have, a colorful blazer. Blazers are it jackets and spring essentials for carrying a light layer for spring fashion, but they are super cute.",
+          "image": "blazer.jpg"
+        }
+      ],
+      "date": "2023-07-01"
+    },
+    {
+      "id": "Find a perfect dress",
+      "title": "Find a perfect dress",
+      "intro": "The perfect dresses are a girl’s best friend. They’re versatile, comfortable and fun. No matter what your shape is, there are amazing dress options so you can feel like a million bucks. To find your perfect dress style(s), it’s a good idea to meet us in the middle, at your waist  To find the perfect dress to fit your body shape, determining where and how the waist of your dress hits you will make all the difference.",
+      "image": "dress.jpg",
+      "content": [
+        {
+          "point": "Empire Waist",
+          "description": "Empire dresses are fitted through the bust and flowy at the bottom. This style is another winner for just about everyone. If you’re an apple or on the curvy side, empire dresses will help you play up the bust and minimize everywhere else. If you’re more petite, this style will help define your silhouette – especially in maxi length.",
+          "image": "empire.jpg"
+        },
+        {
+          "point": "A-line",
+          "description": "A line dresses are fitted to your waist, and then flare out gradually to the hem. This shape is minimizing the midsection, hips, and thighs, and draw attention to the bust half at the same time (depending on the neckline). There’s a reason that most bridesmaid dresses are A-line: It is singular most flattering fit for every body type. The good news is that you actually WILL wear this style again and again, because it comes in way more varieties than just heavy pink satin!",
+          "image": "Aline.jpg"
+        },
+        {
+          "point": "Drop waist",
+          "description": "This style usually conjures up the roaring 20’s and flapper dresses. We love this style in a mini length, which modernizes it a bit. The key to pulling off a drop-waist dress is making sure that it doesn’t hug you anywhere. It looks best when it hangs freely. This style looks amazing on athletic, lean, and boxy shapes who don’t have much curve throughout the hip.",
+          "image": "drop.jpg"
+        }
+      ],
+      "date": "2023-07-01"
+    },
+    {
+      "id": "The cutest ways to style a bandana",
+      "title": "The cutest ways to style a bandana",
+      "intro": "We found some good ideas for styling a bandana:",
+      "image": "hairband.jpg",
       "content": [
         {
           "point": "Use the bandana as a hair tie",
-          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!",
+          "image": "floral_bandana.jpg"
         },
         {
           "point": "Bandana as a headband",
-          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head.",
+          "image": "headband_bandana.jpg"
+        },
+        {
+          "point": "Bandana braid",
+          "description": "If you're looking for a more daring look, braid the bandana into your hair. This style is perfect for keeping your hair away from your face. ",
+          "image": "braid_bandana.jpg"
+        },
+        {
+          "point": "Tie the bandana in the front",
+          "description": "For a fun spin on the typical headband look, tie it in the front instead of the back. This keeps the tie front and center, making the knot a part of your look.",
+          "image": "bandana.jpg"
+        },
+        {
+          "point": "Tie the bandana in the front",
+          "description": "For a fun spin on the typical headband look, tie it in the front instead of the back. This keeps the tie front and center, making the knot a part of your look.",
+          "image": "bandana.jpg"
+        }
+      ],
+      "date": "2023-07-01"
+    },
+    {
+      "id": "Metallic eyeshadows are the ultimate summer beauty trend",
+      "title": "Metallic eyeshadows are the ultimate summer beauty trend",
+      "intro": "The decision is final: Metallic eyeshadow reigns as the ultimate makeup trend this season. Summer presents the ideal opportunity for exploring fresh looks, and there's no better choice than this. Navigating through the options to determine the most suitable products for a new venture can be quite a task. Thus, we have assumed the responsibility of identifying five stunning metallic eyeshadows in shades perfect for summer. Prepare to radiate throughout the season. Embrace the shimmer and shine, as this summer is dedicated to all the enthusiasts of luminous beauty.",
+      "image": "eyes.jpg",
+      "content": [
+        {
+          "point": "MAC Cosmetics Dazzleshadow Extreme",
+          "description": "Prepare yourself for an abundance of dazzling shimmer - this particular eyeshadow means business. Without a doubt, it's destined to capture everyone's attention throughout the entire summer season. Available in a selection of ten distinct shades, this eyeshadow boasts an impressive level of pigmentation, ensuring that a radiant and luminous look is practically guaranteed. Amidst the array of irresistible shades, our top picks for summer are undeniably 'Celebutante' and 'Yes to Sequins.'",
+          "image": "mac.png"
+        },
+        {
+          "point": "Colourpop Chrome Liquid Shadow",
+          "description": "Attention, celestial royalty! Get ready for your eyes to captivate the entire season with Colourpop's extraordinary hue, 'Morpho.' This liquid eyeshadow is a trifecta of shades, each destined to create a striking and dynamic color shift. Prepare for a perpetual state of breathtaking beauty whenever you wear this shade.'",
+          "image": "colorpop.png"
+        },
+        {
+          "point": "Elf Cosmetics Liquid Glitter Eyeshadow",
+          "description": "Our current obsession resides in the captivating hue named 'Mermaid Shimmy'. Frankly, the name itself prompted an immediate addition to our shopping cart. Notably, this eyeshadow boasts rapid drying properties and an impressive longevity. If you're seeking further inspiration from the depths of the ocean, be sure to explore the enchanting possibilities of 'Ocean Eyes'.",
+          "image": "elf.png"
+        },
+        {
+          "point": "Urban Decay 24/7 Moondust Glitter",
+          "description": "Indulging in the allure of moondust adorning your eyes is an irresistible notion - one that certainly captivates our interest. The renowned and iconic shade, 'Space Cowboy', boasts a dedicated and extensive fan base, and for good reason. This incredibly rich and vibrant eyeshadow possesses a remarkable staying power of up to 16 hours, promising a lasting and impactful gaze. Imagine it as a finely powdered disco ball, patiently awaiting its moment to grace your eyelids with its dazzling radiance.",
+          "image": "urbandecay.png"
+        }
+      ],
+      "date": "2023-07-15"
+    },
+    {
+      "id": "How to dress like Kat Stratford",
+      "title": "How to dress like Kat Stratford",
+      "intro": "Following the 1999 release of '10 Things I Hate About You', there emerged a singular character who bestowed upon us a wellspring of fashion inspiration and unwavering confidence for years to follow: the inimitable Kat Stratford. Whether she was inadvertently delivering love-laden poems within the classroom or wholeheartedly embracing the fervor of girl band performances, Kat's seemingly effortless style left an indelible mark in every scene she graced. Should you find yourself yearning for that quintessential '90s romantic comedy aesthetic, your quest concludes here. Allow us to impart the art of embodying this essence in a mere few steps.",
+      "image": "10things.jpg",
+      "content": [
+        {
+          "point": "Long skirts",
+          "description": "No rendition of the Kat Stratford aesthetic would be deemed comprehensive without the inclusion of a midi skirt. Your choices unfold in two distinct directions: the poised monochrome route or the curated charm of a printed selection. Furthermore, these perennial articles frequently grace the racks of thrift stores, presenting a captivating option for those attuned to secondhand treasures.",
+          "image": "longskrt.jpg"
+        },
+        {
+          "point": "Low-waisted cargo pants",
+          "description": "What other ensemble could conceivably accompany your outdoor sketching session, all while Joseph Gordon-Levitt endeavors to win the affections of your sister? These impeccable attire selections resonate with the essence of the '90s and 2000s, seamlessly blending comfort with practicality (not to mention the essential inclusion of pockets).",
+          "image": "low.jpg"
+        },
+        {
+          "point": "Long sleeve T-shirts",
+          "description": "Kat effortlessly flaunts a long-sleeve tee in numerous pivotal scenes of the movie, yet we couldn't resist highlighting her post-paintball ensemble.",
+          "image": "shirt.jpg"
+        },
+        {
+          "point": "Adorable up-dos",
+          "description": "Kat's hair is always perfectly in order, no matter the setting. Emulate her effortless daily hair look by slicking back the front strands and gathering the remaining hair with claw clips. To recreate her iconic prom updo, gather all your hair into a high ponytail, create a regal circle of curls using a small curling iron, and then secure the style with bobby pins. And there you have it!",
+          "image": "kathair.jpg"
+        },
+        {
+          "point": "Pearls",
+          "description": "Kat boldly dons her signature pearls to challenge the status quo and grace the school prom. Consider adorning yourself with an elegant faux pearl choker or opt for one embellished with a distinctive charm. This choice is certain to infuse a dash of refined elegance into your ensembles, irrespective of the occasion.",
+          "image": "katpearls.jpg"
+        }
+      ],
+      "date": "2023-07-15"
+    },
+    {
+      "id": "Pick your summer persona",
+      "title": "Pick your summer persona",
+      "intro": "Discover your ultimate summer aesthetic by selecting one (or all) that resonates with you. Once you've made your choice, we'll guide you through assembling the perfect ensemble to effortlessly embrace your selected vibe.",
+      "image": "summer.jpg",
+      "content": [
+        {
+          "point": "The poolside princess",
+          "description": "If candy-colored items consistently beckon to you, if you've never encountered a pink-tinted filter you didn't adore, and if you effortlessly identify with a certain Disney princess, then your vision of sun-soaked enjoyment involves reclining on an Instagram-ready pool float with a perfectly coordinated manicure. Your essence exudes sweetness, much like your vibrant aesthetic.",
+          "image": "pool.png"
+        },
+        {
+          "point": "The lady of the lakehouse",
+          "description": "Eagerly anticipating the reunion with your camp comrades? Forever leading the charge to the dock? The time has come to shine. Merge vintage t-shirts and patterns, embrace earthy hues, and accentuate with handcrafted accessories—and rest assured, you're bound to claim the title of the cherished counselor this year.",
+          "image": "lake.png"
+        },
+        {
+          "point": "The getaway girlie",
+          "description": "Embrace the beach vibes! Now's the time to don classic essentials: well-worn cutoffs, effortless cover-ups, cozy slides, and relaxed knits. You're the embodiment of the girl captured on the 'Wish You Were Here' postcard.",
+          "image": "getaway.png"
+        }
+      ],
+      "date": "2023-07-15"
+    },
+    {
+      "id": "Ultimate guide for the mermaid aesthetic",
+      "title": "Ultimate guide for the mermaid aesthetic",
+      "intro": "Imagine immersing yourself in all things mermaid-inspired, capturing the essence of the ocean in every aspect—think beachy shades, shimmering iridescence, delicate ruffles, and the elegance of pearls. Good fortune is on your side, as we're here to provide you with the ultimate compendium on everything mermaid.",
+      "image": "mermaid.jpg",
+      "content": [
+        {
+          "point": "The outfit",
+          "description": "Mermaid fashion thrives on textures, layers, and embellishments. Embrace crochet, corsets, and ruffles for a feminine beachy look. Choose ocean-inspired shades like soft greens, blues, and purples.",
+          "image": "outfitmarmaid.jpg"
+        },
+        {
+          "point": "The accessories",
+          "description": "Elegant pearls are beloved by mermaids and us alike! Elevate your style with jewelry to enhance your coastal outfit. Embrace shells, layered gold bracelets, vintage rings, and, of course, an abundance of pearls.",
+          "image": "mermaidjewelry.jpg"
+        },
+        {
+          "point": "The makeup",
+          "description": "Achieve the coveted effortless glossy look in your makeup. Simply blend in shimmer, incorporate pearl highlights, and work with an aqua color palette for a stunning dewy finish.",
+          "image": "makeupmarmaid.jpg"
+        },
+        {
+          "point": "The hair",
+          "description": "Embrace beachy, tousled waves to embody the mermaidcore vibe. Utilize a hair waver or opt for braids overnight, and you're ready to roll. Alternatively, enhance your natural curls for an even more authentic touch.",
+          "image": "mermaidhair.jpg"
         }
       ],
       "date": "2023-07-01",
-      "image": "kat.jpg"
+      "tags": ["Next.js", "React", "Web Development"]
     },
     {
-      "id": "B",
-      "title": "B",
-      "intro": "Blabascnkscnkascnsic ascjasdpojdpo jsd pojsdo pjdojsdposdpcjdp sdpjo j0 jwpojw",
+      "id": "Spice up your back to scool wardrobe",
+      "title": "Spice up your back to scool wardrobe",
+      "intro": "Top Fashion Hack: Elevate your look with versatile accessories you can flaunt throughout the week. From trendy sneakers and chic bags to stylish jackets, these pieces effortlessly enhance any outfit. Not only do they exude a high level of style, but they also excel in reusability, making 'adore that!' a compliment you'll grow accustomed to hearing.",
+      "image": "school.jpg",
       "content": [
         {
-          "point": "Use the bandana as a hair tie",
-          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+          "point": "Statement sneaks",
+          "description": "Opt for a fantastic pair of sneakers as your ultimate go-to footwear this autumn. With the perfect choice, you can effortlessly match them with a wide range of outfits, from flare pants to your homecoming dress. Our preferred styles carry a subtle touch of '90s skater vibe, setting them apart. It's important to note that these are far beyond your regular workout sneakers, so keep that in mind.",
+          "image": "shoes.jpg"
         },
         {
-          "point": "Bandana as a headband",
-          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+          "point": "The 'starter' jacket",
+          "description": "Ah, the classic September predicament: too chilly for just a light layer, yet not cold enough for a hefty coat. Say goodbye to your comfort concerns by embracing a solution that lies in a jacket that's more than a shirt but not quite a coat. This versatile piece takes charge from your early morning classes all the way to your journey back on the bus.",
+          "image": "jacket.jpeg"
+        },
+        {
+          "point": "The bag (almost) too cute for school",
+          "description": "Listen up, since you'll be toting a school bag daily, why not opt for a remarkable choice? These go beyond being mere backpacks: With their stylish and distinctive designs, they enhance your jeans, matching sets, and t-shirts, transforming each outfit you wear to school into something truly extraordinary.",
+          "image": "bag.jpeg"
         }
       ],
-      "date": "2023-07-15",
-      "image": "kat.jpg"
+      "date": "2023-07-01"
     },
     {
-      "id": "C",
-      "title": "C",
-      "intro": "Mamamamam attatattatat",
+      "id": "Outfits inspired by your favourite 2000s movies",
+      "title": "Outfits inspired by your favourite 2000s movies",
+      "intro": "The allure of time travel is captivating. Past eras influence today's trends, like the 2000s seen in iconic movies. Think Elle Woods' pink wardrobe and Jenna Rink's party dresses. For a stylish update, find inspiration in your beloved Y2K films. Here are outfit ideas from our cherished new millennium movies.",
+      "image": "movies.jpg",
       "content": [
         {
-          "point": "Use the bandana as a hair tie",
-          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+          "point": "Legally Blonde",
+          "description": "Whoever said you can't combine scholarly pursuits with style clearly hasn't met Elle Woods. She's living proof that you can excel in both arenas while looking incredibly fashionable. As a Harvard alumna, she embraces an impressive array of professional ensembles, yet she defies the notion that her attire must be dull or lacking personality. Elle fearlessly dons her signature pink hues and confidently enters her classes, making a statement that personal style doesn't have to be compromised to command respect as a law student.",
+          "image": "legally_blonde.jpg"
         },
         {
-          "point": "Bandana as a headband",
-          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+          "point": "13 Going On 30",
+          "description": "The fashion sense of Jenna Rink in '13 Going On 30' perfectly encapsulates her character—daring, driven, and genuine. This vibrant ensemble pays homage to one of Jenna's standout appearances in the movie, with each element reflecting her lively persona. Beyond its visual appeal, you can adopt this look to boost your self-assurance. Emulate Jenna's vivid makeup style or venture into a fresh hairstyle experiment—then infuse the ensemble with your own distinctive touch, creating a look that radiates confidence.",
+          "image": "13_going_on_30.jpg"
+        },
+        {
+          "point": "High School Musical",
+          "description": "Gabriella's understated demeanor serves as a cornerstone of her character's resilience in the High School Musical trilogy. In contrast to her fellow film counterparts, Gabriella possesses a grounded and introverted disposition. Her fashion choices, though uncomplicated, contribute to setting her apart in the bustling landscape of East High, earning her the title of the school's understated 'it-girl', a role she shares with none other than Sharpay, naturally.",
+          "image": "hsm.jpg"
         }
       ],
-      "date": "2023-07-15",
-      "image": "kat.jpg"
+      "date": "2023-07-01"
     },
     {
-      "id": "D",
-      "title": "D",
-      "intro": "Mamamamam attatattatat",
+      "id": "Four jewelry trends to try",
+      "title": "Four jewelry trends to try",
+      "intro": "Let's face it: Completely revamping your wardrobe with each new season isn't always feasible. However, there's a simple and cost-effective solution to breathe new life into your existing collection – elevate your jewelry game. Here are four trends you should consider trying!",
+      "image": "nakit.jpg",
       "content": [
         {
-          "point": "Use the bandana as a hair tie",
-          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+          "point": "Pearls",
+          "description": "Embrace your inner Audrey Hepburn, as pearls are staging a significant resurgence this spring. Pearls stand as a timeless and sophisticated choice that transcends trends. Regardless of their size or form, pearls have the power to elevate any ensemble. While pearl huggies like these are our favorites, you can also opt for pearl necklaces or bracelets to make your style statement.",
+          "image": "pearls.jpg"
         },
         {
-          "point": "Bandana as a headband",
-          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+          "point": "Layered necklaces",
+          "description": "If you didn't catch it, layering necklaces is a major trend right now. You have the option to mix and match your current necklaces to craft a distinct combination, or you can purchase a pre-layered necklace stack. Our personal favorite is this teardrop and chain duo featuring a lovely pink pendant.",
+          "image": "necklase.jpg"
+        },
+        {
+          "point": "Bright colors",
+          "description": "It's the ideal moment to introduce vibrant and striking accessories into your wardrobe. Looking to elevate a simple white tee and jeans combo? Give these lively beaded bracelets a shot. Not only do they infuse a burst of color into your ensemble, but they also bring a smile to your face.",
+          "image": "braceles.jpg"
         }
       ],
-      "date": "2023-07-15",
-      "image": "kat.jpg"
+      "date": "2023-07-01"
     },
     {
-      "id": "E",
-      "title": "E",
-      "intro": "Mamamamam attatattatat",
+      "id": "How to glow up your basic ponytail",
+      "title": "How to glow up your basic ponytail",
+      "intro": "Gym class is requesting the return of its mundane ponytail, but it's time to step up your game. Your mission: Elevate this uninspiring style to new heights. Whether you opt for a touch of intrigue or a dose of full-on glam, bid farewell to the ordinary basic ponytail.",
+      "image": "ponytail.jpg",
       "content": [
         {
-          "point": "Use the bandana as a hair tie",
-          "description": "Add some flair to your everyday ponytail with a colorful bandana. Put your hair up in a scrunchie as you normally would, then tie a bandana around your ponytail as a stylish accent piece. It's cute and practical––and perfect for girls on the go!"
+          "point": "Bring on the baby braids",
+          "description": "Face-framing pieces are the perfect way to change things up...but turning those pieces into braids *really* elevates the look.",
+          "image": "ponybraids.jpg"
         },
         {
-          "point": "Bandana as a headband",
-          "description": "For a super simple look, fold the bandana hot dog-style until you have your ideal width. Then, tie it around the back of your head."
+          "point": "Bubbles and bows",
+          "description": "Arguably the easiest way to take your pony from stale to stunning is to turn it into a bubble style. This spring's upgrade? Ribbons.",
+          "image": "bublepony.jpg"
+        },
+        {
+          "point": "The bony",
+          "description": "This ponytail-meets-bun style was the hottest accessory at the spring '23 runway shows.",
+          "image": "bony.jpg"
+        },
+        {
+          "point": "Classic Claw Clip",
+          "description": "Lazy girls, rejoice. This look takes basically nothing to recreate, not even a brush...unless you really, really want to use one.",
+          "image": "claw.jpg"
         }
       ],
-      "date": "2023-07-01",
-      "tags": ["Next.js", "React", "Web Development"],
-      "image": "kat.jpg"
+      "date": "2023-07-01"
     }
   ],
 
   "styleinspo": [
     {
-      "title": "Getting Started with Next.js",
-      "content": "Next.js is a popular React framework...",
-      "author": "John Doe",
-      "date": "2023-07-01",
+      "title": "Dramatic",
+      "body": [
+        {
+          "content": "The dramatic body type is tall, vertical, and angular, often exceeding 5 feet 5 inches in height. The frame is slender with an elongated structure and lacks prominent waist-hip definition, highlighting a distinct vertical line. Limbs are elongated, showcasing visible bone structure for a delicate and lean appearance. \nSquare and narrow shoulders, are common. Prominent facial bones define the jawline, cheekbones, and nose. Eyes are typically small and straight or almond-shaped, while lips may be long, narrow, thin, or straight. \nTaut skin around the cheeks and jaw creates sharp contours, enhancing the overall striking appearance.",
+          "image1": "dramaticbody.jpg",
+          "subtitle": "Dramatic Clothing Recommendations",
+          "description": "The Dramatic ID embraces sharpness in style, reflected in clothing with geometric designs. Dramatics excel in high-fashion trends. Solid colors are vital, accentuating form and angles. Crisp prints harmonize with their essence, avoiding blurry textures. Wardrobe highlights: tailored pieces with elongated lines, structured fabrics. Avoid excessive embellishments and color-blocking. Minimize 'disruptions' to honor the vertical line, favoring monochromatic palettes, deep neutrals, and refined detailing.",
+          "image2": "dramaticstyle.jpg"
+        }
+      ],
       "image": "/images/nextjs-blog.png"
     },
     {
@@ -112,63 +363,66 @@
   ],
   "quiz": [
     {
-      "questionText": "Which color is often associated with elegance?",
+      "questionText": "How tall do you appear?",
       "answers": [
-        { "answerText": "Red", "id": 1 },
-        { "answerText": "Blue", "id": 2 },
-        { "answerText": "Black", "id": 3 },
-        { "answerText": "Yellow", "id": 4 },
-        { "answerText": "pink", "id": 5 }
+        { "answerText": "I look taller than I am", "id": 1 },
+        { "answerText": "I look slightly taller", "id": 2 },
+        { "answerText": "I look my hight", "id": 3 },
+        { "answerText": "I look slightly shorter", "id": 4 },
+        { "answerText": "I look very small", "id": 5 }
       ]
     },
     {
-      "questionText": "Which accessory can add a pop of color to your outfit?",
+      "questionText": "What is the shape of you shoulders?",
       "answers": [
-        { "answerText": "Red", "id": 1 },
-        { "answerText": "Blue", "id": 2 },
-        { "answerText": "Black", "id": 3 },
-        { "answerText": "Yellow", "id": 4 },
-        { "answerText": "pink", "id": 5 }
+        { "answerText": "Sharp and Narrow", "id": 1 },
+        { "answerText": "Broad and Blunt", "id": 2 },
+        { "answerText": "Symetrical and Even", "id": 3 },
+        { "answerText": "Sloaped and Tappered", "id": 4 },
+        { "answerText": "Sloaped and Rounded", "id": 5 }
       ]
     },
     {
-      "questionText": "What is a little black dress often referred to as?",
+      "questionText": "What is the shape of you arms and legs, and how long are they?",
       "answers": [
-        { "answerText": "Red", "id": 1 },
-        { "answerText": "Blue", "id": 2 },
-        { "answerText": "Black", "id": 3 },
-        { "answerText": "Yellow", "id": 4 },
-        { "answerText": "pink", "id": 5 }
+        { "answerText": "Narrow and Elongated", "id": 1 },
+        { "answerText": "Broad and Elongated", "id": 2 },
+        { "answerText": "Moderate", "id": 3 },
+        { "answerText": "Short in proportion to your hight", "id": 4 },
+        { "answerText": "Very short in proportion to your hight", "id": 5 }
       ]
     },
     {
-      "questionText": "What is a little black dress often referred to as?",
+      "questionText": "What is the shape of your body?",
       "answers": [
-        { "answerText": "Red", "id": 1 },
-        { "answerText": "Blue", "id": 2 },
-        { "answerText": "Black", "id": 3 },
-        { "answerText": "Yellow", "id": 4 },
-        { "answerText": "pink", "id": 5 }
+        {
+          "answerText": "Long and Straight, even when gaining weight",
+          "id": 1
+        },
+        { "answerText": "Broad with muscular tendencies", "id": 2 },
+        { "answerText": "Moderate and Symmetrical", "id": 3 },
+        { "answerText": "Soft Hourglass", "id": 4 },
+        { "answerText": "Very Defined Hourglass", "id": 5 }
       ]
     },
     {
-      "questionText": "What is a little black dress often referred to as?",
+      "questionText": "What is the shape of your jawline?",
       "answers": [
-        { "answerText": "Red", "id": 1 },
-        { "answerText": "Blue", "id": 2 },
-        { "answerText": "Black", "id": 3 },
-        { "answerText": "Yellow", "id": 4 },
-        { "answerText": "pink", "id": 5 }
+        { "answerText": "Sharp and Defined", "id": 1 },
+        { "answerText": "Blunt and Wide", "id": 2 },
+        { "answerText": "Neither Sharp or Round", "id": 3 },
+        { "answerText": "Narrow and Delicate", "id": 4 },
+        { "answerText": "Rounded and Broad", "id": 5 }
       ]
     },
     {
-      "questionText": "What is a little black dress often referred to as?",
+      "questionText": "What is the shape of your cheekbones?",
       "answers": [
-        { "answerText": "Red", "id": 1 },
-        { "answerText": "Blue", "id": 2 },
-        { "answerText": "Black", "id": 3 },
-        { "answerText": "Yellow", "id": 4 },
-        { "answerText": "pink", "id": 5 }
+        { "answerText": "High and Noticeable", "id": 1 },
+        { "answerText": "Wide and Blunt", "id": 2 },
+        { "answerText": "Moderate", "id": 3 },
+        { "answerText": "Slightly Rounded and Delicate", "id": 4 },
+        { "answerText": "Rounded and Full", "id": 5 }
       ]
     }
   ]
