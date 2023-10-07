@@ -11,6 +11,12 @@
       "email": "a@a.com",
       "password": "$2a$10$pUL.emjaDUGfWSJNeO/jLOsOoxWCiusdRmGAABhNMtolEdCDG/Rcq",
       "id": 2
+    },
+    {
+      "username": "marti",
+      "email": "marti.marti@gmail.com",
+      "password": "$2a$10$zFt6YkWj7UAd9xnQ6JU6zuxQZG8tTw7fbgeYQfTVHo0yRfkeHckgG",
+      "id": 3
     }
   ],
   "blogs": [
