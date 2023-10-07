@@ -19,13 +19,13 @@ To get this project up and running, follow these steps:
 
 1. Clone the repository to your local machine:
 git clone https://github.com/MartinaKostic/HCI-seminar-M-I
-2.Navigate to the project directory
+2. Navigate to the project directory
 cd HCI-seminar-M-I
-3.Install the project dependencies:
+3. Install the project dependencies:
 npm install
-4.Start the development server for the frontend:
+4. Start the development server for the frontend:
 npm run dev
-5.Start the JSON Server for managing data:
+5. Start the JSON Server for managing data:
 json-server --watch data.json --port 3003
 
 Now you should have the application running and accessible in your web browser.
@@ -34,5 +34,5 @@ Now you should have the application running and accessible in your web browser.
 
 [Live Demo](https://style-me-one.vercel.app/)
 [GitHub Repository of a deployed app's frontend](https://github.com/MartinaKostic/StyleMe)
-[GitHub Repository of a deployed app's backend(https://github.com/MartinaKostic/JsonServerApi)
+[GitHub Repository of a deployed app's backend](https://github.com/MartinaKostic/JsonServerApi)
 
