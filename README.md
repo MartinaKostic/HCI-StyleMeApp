@@ -19,7 +19,7 @@ To get this project up and running, follow these steps:
 
 1. Clone the repository to your local machine:
 git clone https://github.com/MartinaKostic/HCI-seminar-M-I
-2. Navigate to the project directory
+2. Navigate to the project directory:
 cd HCI-seminar-M-I
 3. Install the project dependencies:
 npm install
