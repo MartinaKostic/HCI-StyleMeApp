@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div>
-      <Header ></Header>
+      <Header></Header>
       <div className="grid lg:grid-cols-3 h-128 sm:grid-row-3 text-center">
         <div className="grid grid-row content-center bg-green bg-opacity-30 z-10 w-full">
           <div className="flex justify-center">

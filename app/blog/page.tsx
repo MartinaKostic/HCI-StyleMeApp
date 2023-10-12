@@ -9,10 +9,13 @@ import { BsSearch } from "react-icons/bs";
 import globalStyles from "@/utils/global";
 import axios from "axios";
 import React from "react";
+import { LoginContext } from "@/context/loginContext";
+import { useContext } from "react";
 
 export default function Blog() {
-  const [blogs, setBlogs] = React.useState([]);
-
+  const [blogs, setBlogs] = React.useState<any>([]);
+  const loginContext = useContext(LoginContext);
+  const [search, setSearch] = React.useState("");
   //dohvati sva pitanja
   React.useEffect(() => {
     refetchBlogs();
@@ -62,6 +65,8 @@ export default function Blog() {
                     name="search"
                     className="py-2 pl-1 w-full bg-transparent text-basis text-text_color placeholder-text_color placeholder-opacity-100 focus:outline-none"
                     placeholder="Find what you're looking for..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
                   />
                 </div>
               </div>
@@ -72,87 +77,168 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen">
-        {blogs.map((blog: any, index: number) =>
-          index % 2 === 0 ? (
-            <div
-              key={index}
-              className="mb-20 grid lg:grid-cols-10 sm:grid-rows-10"
-            >
-              <div className="col-start-2 col-span-5">
-                <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
-                  {blog.title}
-                </h1>
-              </div>
-              <div className="col-start-2 col-span-4 m-5 mx-16">
-                <p>
-                  {blog.content
-                    .map((paragraph: any) => paragraph.description)
-                    .join(" ") // Combine the array into a single string
-                    .slice(0, 300)}
-                  ...
-                </p>
-                <div className="flex justify-end">
-                  <Link href={`/blog/${blog.title}`}>
-                    <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
-                      <span>More...</span>
-                      <style jsx global>
-                        {globalStyles}
-                      </style>
-                    </button>
-                  </Link>
-                </div>
-              </div>
-              <div className="h-72 w-128 relative col-start-6 col-span-4">
-                <Image
-                  src={`/${blog.image}`}
-                  alt="blog_image"
-                  fill={true}
-                  style={{ objectFit: "cover" }}
-                ></Image>
-              </div>
-            </div>
-          ) : (
-            <div
-              key={index}
-              className="mb-20 grid lg:grid-cols-10 sm:grid-rows-10"
-            >
-              <div className="col-start-5 col-span-5">
-                <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
-                  {blog.title}
-                </h1>
-              </div>
-              <div className="h-72 w-128 relative col-start-2 col-span-4">
-                <Image
-                  src={`/${blog.image}`}
-                  alt="blog_image"
-                  fill={true}
-                  style={{ objectFit: "cover" }}
-                ></Image>
-              </div>
-              <div className="col-start-6 col-span-4 m-5 mr-16">
-                <p>
-                  {blog.content
-                    .map((paragraph: any) => paragraph.description)
-                    .join(" ") // Combine the array into a single string
-                    .slice(0, 300)}
-                  ...
-                </p>
-                <div className="flex justify-end">
-                  <Link href={`/blog/${blog.title}`}>
-                    <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
-                      <span>More...</span>
-                      <style jsx global>
-                        {globalStyles}
-                      </style>
-                    </button>
-                  </Link>
-                </div>
-              </div>
+      {loginContext.isLogin
+        ? blogs &&
+          blogs.length > 0 && (
+            <div className="min-h-screen">
+              {blogs
+                .filter((blog: { title: string }) =>
+                  blog.title.toLowerCase().includes(search.toLowerCase())
+                )
+                .map((blog: any, index: number) =>
+                  index % 2 === 0 ? (
+                    <div
+                      key={index}
+                      className="mb-20 grid lg:grid-cols-10 sm:grid-rows-10"
+                    >
+                      <div className="col-start-2 col-span-5">
+                        <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
+                          {blog.title}
+                        </h1>
+                      </div>
+                      <div className="col-start-2 col-span-4 m-5 mx-16">
+                        <p>
+                          {blog.content
+                            .map((paragraph: any) => paragraph.description)
+                            .join(" ") // Combine the array into a single string
+                            .slice(0, 300)}
+                          ...
+                        </p>
+                        <div className="flex justify-end">
+                          <Link href={`/blog/${blog.title}`}>
+                            <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
+                              <span>More...</span>
+                              <style jsx global>
+                                {globalStyles}
+                              </style>
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="h-72 w-128 relative col-start-6 col-span-4">
+                        <Image
+                          src={`/${blog.image}`}
+                          alt="blog_image"
+                          fill={true}
+                          style={{ objectFit: "cover" }}
+                        ></Image>
+                      </div>
+                    </div>
+                  ) : (
+                    <div
+                      key={index}
+                      className="mb-20 grid lg:grid-cols-10 sm:grid-rows-10"
+                    >
+                      <div className="col-start-5 col-span-5">
+                        <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
+                          {blog.title}
+                        </h1>
+                      </div>
+                      <div className="h-72 w-128 relative col-start-2 col-span-4">
+                        <Image
+                          src={`/${blog.image}`}
+                          alt="blog_image"
+                          fill={true}
+                          style={{ objectFit: "cover" }}
+                        ></Image>
+                      </div>
+                      <div className="col-start-6 col-span-4 m-5 mr-16">
+                        <p>
+                          {blog.content
+                            .map((paragraph: any) => paragraph.description)
+                            .join(" ") // Combine the array into a single string
+                            .slice(0, 300)}
+                          ...
+                        </p>
+                        <div className="flex justify-end">
+                          <Link href={`/blog/${blog.title}`}>
+                            <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
+                              <span>More...</span>
+                              <style jsx global>
+                                {globalStyles}
+                              </style>
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                )}{" "}
             </div>
           )
-        )}{" "}
-      </div>
+        : blogs &&
+          blogs.length > 0 && (
+            <>
+              <div className="mb-20 grid lg:grid-cols-10 sm:grid-rows-10">
+                <div className="col-start-2 col-span-5">
+                  <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
+                    {blogs[0].title}
+                  </h1>
+                </div>
+                <div className="col-start-2 col-span-4 m-5 mx-16">
+                  <p>
+                    {blogs[0].content
+                      .map((paragraph: any) => paragraph.description)
+                      .join(" ") // Combine the array into a single string
+                      .slice(0, 300)}
+                    ...
+                  </p>
+                  <div className="flex justify-end">
+                    <Link href={`/blog/${blogs[0].title}`}>
+                      <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
+                        <span>More...</span>
+                        <style jsx global>
+                          {globalStyles}
+                        </style>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="h-72 w-128 relative col-start-6 col-span-4">
+                  <Image
+                    src={`/${blogs[0].image}`}
+                    alt="blog_image"
+                    fill={true}
+                    style={{ objectFit: "cover" }}
+                  ></Image>
+                </div>
+              </div>
+              <div className="mb-20 grid lg:grid-cols-10 sm:grid-rows-10">
+                <div className="col-start-5 col-span-5">
+                  <h1 className="my-5 bg-hotpink text-center text-2xl py-1">
+                    {blogs[1].title}
+                  </h1>
+                </div>
+                <div className="h-72 w-128 relative col-start-2 col-span-4">
+                  <Image
+                    src={`/${blogs[1].image}`}
+                    alt="blog_image"
+                    fill={true}
+                    style={{ objectFit: "cover" }}
+                  ></Image>
+                </div>
+                <div className="col-start-6 col-span-4 m-5 mr-16">
+                  <p>
+                    {blogs[1].content
+                      .map((paragraph: any) => paragraph.description)
+                      .join(" ") // Combine the array into a single string
+                      .slice(0, 300)}
+                    ...
+                  </p>
+                  <div className="flex justify-end">
+                    <Link href={`/blog/${blogs[1].title}`}>
+                      <button className="border my-5 border-text_color h-10 w-[250px] relative hover-button text-lg">
+                        <span>More...</span>
+                        <style jsx global>
+                          {globalStyles}
+                        </style>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
       <div className="absolute h-[40rem] w-[40rem] -right-0 bottom-0 -z-[10] overflow-hidden">
         <div className="bg-pink rounded-full w-full h-full absolute -right-36 -bottom-3"></div>
       </div>

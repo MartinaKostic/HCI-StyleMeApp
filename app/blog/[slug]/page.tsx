@@ -2,7 +2,6 @@ import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Image from "next/image";
-import path from "path";
 
 interface ContentProps {
   id: string;
@@ -45,23 +44,47 @@ export default async function BlogPost({ params }: Params) {
         </div>
       </div>
       {/* Blog content */}
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto px-32">
         {/* Blog points */}
         <section className="mb-8">
           <ol className="list-decimal font-semibold pl-6">
-            {blog.content.map((content: ContentProps) => (
-              <li key={content.id} className="mb-4 ">
+            {blog.content.map((content: ContentProps, index: number) => (
+              <li key={content.id} className="mb-4">
                 <p className="text-xl font-semibold">{content.point}</p>
-                <div className="lg:grid lg:grid-cols-2">
-                  <p className="text-base font-normal">{content.description}</p>
-                  <div className="h-72 w-128 relative ">
-                    <Image
-                      src={`/${content.image}`}
-                      alt="Point Image"
-                      fill={true}
-                      style={{ objectFit: "cover" }}
-                    />
-                  </div>
+                <div
+                  className={`lg:grid lg:grid-cols-2 ${
+                    index % 2 === 0 ? "lg:col-reverse" : ""
+                  }`}
+                >
+                  {index % 2 === 0 ? (
+                    <>
+                      <div className="h-72 my-10 w-128 relative">
+                        <Image
+                          src={`/${content.image}`}
+                          alt="Point Image"
+                          fill={true}
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                      <p className="text-base font-normal px-10 my-10">
+                        {content.description}
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-base font-normal px-10 my-10">
+                        {content.description}
+                      </p>
+                      <div className="my-10 h-72 w-128 relative">
+                        <Image
+                          src={`/${content.image}`}
+                          alt="Point Image"
+                          fill={true}
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                    </>
+                  )}
                 </div>
               </li>
             ))}
@@ -76,6 +99,9 @@ export default async function BlogPost({ params }: Params) {
               readers to take action or explore related content.
             </p>
           </section> */}
+      </div>
+      <div className="absolute h-[40rem] w-[40rem] -right-0 bottom-0 -z-[10] overflow-hidden">
+        <div className="bg-pink rounded-full w-full h-full absolute -right-36 -bottom-3"></div>
       </div>
       <Footer></Footer>
     </div>

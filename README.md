@@ -32,7 +32,7 @@ Now you should have the application running and accessible in your web browser.
 
 ## Deployed App
 
-[Live Demo](https://style-me-one.vercel.app/)
-[GitHub Repository of a deployed app's frontend](https://github.com/MartinaKostic/StyleMe)
-[GitHub Repository of a deployed app's backend](https://github.com/MartinaKostic/JsonServerApi)
+[Live Demo](https://style-me-one.vercel.app/),
+[GitHub Repository of a deployed apps frontend](https://github.com/MartinaKostic/StyleMe),
+[GitHub Repository of a deployed apps backend](https://github.com/MartinaKostic/JsonServerApi)
 

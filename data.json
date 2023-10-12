@@ -17,6 +17,18 @@
       "email": "marti.marti@gmail.com",
       "password": "$2a$10$zFt6YkWj7UAd9xnQ6JU6zuxQZG8tTw7fbgeYQfTVHo0yRfkeHckgG",
       "id": 3
+    },
+    {
+      "username": "marti123",
+      "email": "marti123@gmail.com",
+      "password": "$2a$10$Z6l9vPlnOvjrsLVE6N6mh.RfFrGAAiH0SfVcbmiCOyj78ioQkzQG6",
+      "id": 4
+    },
+    {
+      "username": "lala12",
+      "email": "lala@linka.com",
+      "password": "$2a$10$9Fo3f47Ss2nffYyLxV4z7eFSiGIR6VjVDA3sftqgQJ2S/LPo1t0cC",
+      "id": 5
     }
   ],
   "blogs": [
@@ -82,7 +94,7 @@
       "id": "Find a perfect dress",
       "title": "Find a perfect dress",
       "intro": "The perfect dresses are a girl’s best friend. They’re versatile, comfortable and fun. No matter what your shape is, there are amazing dress options so you can feel like a million bucks. To find your perfect dress style(s), it’s a good idea to meet us in the middle, at your waist  To find the perfect dress to fit your body shape, determining where and how the waist of your dress hits you will make all the difference.",
-      "image": "dress.jpg",
+      "image": "dresses.jpg",
       "content": [
         {
           "point": "Empire Waist",
@@ -372,7 +384,63 @@
           "image2": "dramaticstyle.jpg"
         }
       ],
-      "image": "/images/nextjs-blog.png"
+      "image": "dramaticpicture.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Classic",
+      "body": [
+        {
+          "content": "The Classic image ID embodies an exquisite equilibrium between soft and sharp attributes throughout every aspect of the natural body. This fusion results in a poised and harmonious appearance that emanates a sense of symmetry and equilibrium.\nThe Classic Kibbe body type typically exhibits moderate height, generally ranging from 5 feet 3 inches to 5 feet 7 inches. Possessing well-proportioned dimensions, they strike a balance between being short and long-waisted.\nTheir silhouette reflects a harmonious interplay between the bust and hips, albeit leaning more towards a straighter line. Facial features are often characterized by a moderate and symmetrical allure.",
+          "image1": "classic.jpg",
+          "subtitle": "Classic Clothing Recommendations",
+          "description": "Classic body type should maintain style lines that honor body shape and symmetry, avoiding extremes. Smooth and symmetrical silhouettes with controlled edges are recomended—straight or softly curved lines, subtly tailored or slightly flowing, without overwhelming tailoring or flow.\nA clean, unbroken silhouette is essential, reflecting elegance. Focused on a balanced 'head-to-toe' look. Symmetry is key; blended similar shapes whether slightly geometric or curved. Details should be clean, minimal, and understated, working seamlessly with the garment's smooth line.",
+          "image2": "classicstyle.jpg"
+        }
+      ],
+      "image": "classicmood.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Gamine",
+      "body": [
+        {
+          "content": "Gamines sport a lithe and lean physique, often displaying sinewy muscles, and a straight body shape. Their bust and hips remain flat, except for instances of excess weight, with a possibility of being slightly short-waisted. Typically under 5 ft 5 in, Gamines are petite in stature.\nPure Gamines boast angular, sharp, and narrow bone structures, sometimes described as 'delicate'. Their shoulders can either be square or tapered, leaning towards a narrow appearance rather than a wide one. Long arms and legs accompany their frame, while narrow hands and feet range from small to moderate.\nLarge eyes, taut cheeks, and facial contours characterize their appearance. Lips are typically narrow or straight, while their size tends to be moderate to thin.",
+          "image1": "gaminebody.jpg",
+          "subtitle": "Gamine Clothing Recommendations",
+          "description": "The Gamine body type thrives in precision, with fitted and crisply tailored pieces featuring small, sharp geometrics. Aim for an overall outline that's sharp and straight. Utilize short horizontal and vertical lines for effective impact.\nThe Gamine body type should experiment with short, sharp, and narrow hemlines, or opt for short-cropped, well-fitted jackets. Embraced sharp edges and extreme tailoring for jackets and separates.\nDetails play a defining role in Gamine look. Integrated sharp necklines, small tailored accents, and crisp lapels for a balanced effect. Abundant details, small and sharp, contribute to lively essence. Colorful separates adorned with aforementioned details can work wonders for Gamines. Also, consider very tailored, slim dresses with sharp edges.",
+          "image2": "gamine.jpg"
+        }
+      ],
+      "image": "soft_gamine.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Natural",
+      "body": [
+        {
+          "content": "The natural body type embodies a blend of horizontal features and blunt edges.\nThe natural body tipe is typically of moderate to tall height, often up to 5 ft 8 inches. Naturals possess angular characteristics with defined yet blunt edges. Their physique leans towards being muscular, yet maintains a lean and toned appearance. Hips tend to be flat, as does the bustline, while arms and legs may slightly trend towards elongation. The potential for long-waistedness exists.\nFacially, Naturals exhibit angular and straight noses, accompanied by taut cheeks and lips of moderate size. Eyes are generally moderate to small, often accompanied by taut cheeks.",
+          "image1": "natural.jpg",
+          "subtitle": "Natural Clothing Recommendations",
+          "description": "The Natural style thrives in softly tailored shapes and a preference for unconstructed pieces. They should aim for a slimmer and fairly narrow outline, while maintaining a loose and effortless essence in your clothing.\nSimplicity serves naturals well, with minimal details that enhance look. Naturals should opt for simple necklines and softly-edged shoulders or jackets. Embraced softer fabrics, particularly knitwear, which seamlessly integrates into style. Textured fabrics and natural materials such as raw silks, linens, and soft leathers complement the aesthetic perfectly.\nIn essence, Natural style flourishes through an artistic blend of patterns, textures, and colors. This organic and creative vibe resonates more effectively than a polished or glamorous approach.",
+          "image2": "naturalstyle.jpg"
+        }
+      ],
+      "image": "naturaloutfit.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Romantic",
+      "body": [
+        {
+          "content": "The Romantic body type is characterized by a distinct absence of sharp features or angles, instead favoring curves, rounded edges, and an hourglass or voluptuous frame.\nTypically moderate to petite in stature, often standing 5 ft 5 inches and below. The Romantic body type exudes a voluptuous and soft appearance, accentuated by its hourglass figure. This includes a curvaceous bustline, hips, and a proportionally smaller waist, harmoniously emphasizing their curves. Rounded or sloped shoulders complement their appearance, along with small hands and feet.\nFacially, Romantics are characterized by lush, full, and sensual features with rounded contours. They frequently showcase large, luminous eyes, full lips, and fleshy cheeks.",
+          "image1": "romanticbody.jpg",
+          "subtitle": "Romatics Clothing Recommendations",
+          "description": "Romantics should wholeheartedly embrace their inherent curves and rounded features, consistently honoring their captivating hourglass figure.\nAchieving this involves selecting soft and flowing silhouettes that elegantly showcase their lush curves, always ensuring a focus on waist emphasis. Employing gentle draping is an excellent method to achieve this effect.\nOptimal fabric choices include lightweight materials that drape gracefully, along with soft woven fabrics. Incorporating sheer, ultra-soft, and ultra-shiny fabrics can further enhance the Romantic's distinct style lines.\nDetails should exude a soft, intricate, and feminine essence. When it comes to color palettes, soft pastels, watercolors, and vivid brights harmonize beautifully with your wardrobe. Alternatively, you can opt for rich, luxuriously blended hues to accentuate your captivating femininity.",
+          "image2": "romanticstyle.jpg"
+        }
+      ],
+      "image": "romantic.jpg"
     }
   ],
   "quiz": [
@@ -388,7 +456,7 @@
           "id": 2
         },
         {
-          "answerText": "I look my hight",
+          "answerText": "I look my height",
           "id": 3
         },
         {
@@ -442,11 +510,11 @@
           "id": 3
         },
         {
-          "answerText": "Short in proportion to your hight",
+          "answerText": "Short in proportion to your height",
           "id": 4
         },
         {
-          "answerText": "Very short in proportion to your hight",
+          "answerText": "Very short in proportion to your height",
           "id": 5
         }
       ]
